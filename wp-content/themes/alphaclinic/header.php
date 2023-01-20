@@ -46,72 +46,62 @@ if ( ! defined( 'WPINC' ) ) {
 <div id="container" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'responsive-mobile' ); ?></a>
 	<a class="skip-link screen-reader-text" href="#main-navigation"><?php _e( 'Skip to main menu', 'responsive-mobile' ); ?></a>
-<?php responsive_mobile_container_top(); ?>
-<?php if ( has_nav_menu( 'top-menu', 'responsive-mobile' ) ) { ?>
-	<div id="top-menu-container" class="container-full-width">
-		<nav id="top-menu" class="container" itemscope itemtype="http://schema.org/SiteNavigationElement">
-			<?php wp_nav_menu(
-				array(
-					'container'      => '',
-					'fallback_cb'    => false,
-					'menu_class'     => 'top-menu',
-					'theme_location' => 'top-menu',
-					'depth'          => 1
-				)
-			); ?>
-		</nav>
-	</div><!-- top menu container -->
-<?php } ?>
-<?php responsive_mobile_header_before(); ?>
-        <div id="header_section">
-	<header id="header" class="container-full-width site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-		<?php responsive_mobile_header_top(); ?>
-		<div class="container">
-			<div class="header-row">
-				<div id="site-branding">
-					<?php responsive_mobile_header_one(); ?>
-				</div>
-				<div id="secondary-header">
-					<?php responsive_mobile_header_two(); ?>
-				</div>
-			</div>
-		</div>
 
+    <?php responsive_mobile_header_before(); ?>
+    <div id="header_section">
+        <div id="main-menu">
+            <header>
+                <div class="top-header">
+                    <div class="custom-container-1352">
+                        <?php if ( is_active_sidebar( 'top-header-widget' ) ) :?>
+                            <?php dynamic_sidebar( 'top-header-widget' ); ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="custom-container-1352">
+                    <div class="second-header">
+                        <!-- menu-trigger start-->
+                        <div class="hamburger">
+                            <div class="hamburger-box">
+                                <!--                            <div class="hamburger-inner"></div>-->
+                                <img src="<?php echo get_theme_file_uri().'/images/hamburger.svg'?>">
+                            </div>
+                        </div>
+                        <!-- menu-trigger end-->
+
+                        <div class="logo-part">
+                            <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                                <img class="logo--dark logo__img" src="<?php header_image(); ?>" alt="" itemprop="image"/>
+                            </a>
+                        </div>
+
+                        <div class="desktop-main-menu">
+                            <div class="header-menu-part">
+                                <!-- main menu start-->
+                                <?php wp_nav_menu(
+                                    array(
+                                        'container'      => 'ul',
+                                        'fallback_cb'    => false,
+                                        'menu_class'     => 'main-menu',
+                                        'list_item_class'  => 'main-menu__item',
+                                        'link_class'   => 'main-menu__link',
+                                        'theme_location' => 'header-menu',
+                                        'depth'          => 2
+                                    )
+                                ); ?>
+                                <!-- main menu end-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
 		<?php responsive_mobile_header_bottom(); ?>
 	</header><!-- #header -->
+    </div>
 <?php responsive_mobile_header_end(); ?>
 
-	<div id="main-menu-container" class="container-full-width">
-		<div id="main-menu" class="container">
-			<nav id="main-navigation" class="site-navigation" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-				<div id="mobile-current-item"><?php responsive_mobile_menu_title(); ?></div>
-				<button id="mobile-nav-button"><span class="accessibile-label"><?php _e( 'Mobile menu toggle', 'responsive-mobile' ); ?></span></button>
-				<?php wp_nav_menu(
-					array(
-						'container'       => 'div',
-						'container_class' => 'main-nav',
-						'theme_location'  => 'header-menu'
-					)
-				); ?>
-			</nav><!-- #site-navigation -->
-		</div><!-- #main-menu -->
-	</div><!-- #main-menu-container -->
-	<div id="sub-menu-container" class="container-full-width">
-		<div id="sub-menu" class="container">
-			<nav id="sub-navigation" class="site-navigation" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-			<?php if( has_nav_menu( 'sub-header-menu', 'responsive-mobile' ) ) {
-				wp_nav_menu(
-					array(
-						'container'      => '',
-						'menu_class'     => 'sub-header-menu',
-						'theme_location' => 'sub-header-menu'
-					)
-				);
-			} ?>
-			</nav><!-- #site-navigation -->
-		</div><!-- #sub-menu -->
-	</div><!-- #sub-menu-container -->
-        </div>
+
 <?php responsive_mobile_wrapper(); // before wrapper container hook ?>
 	<div id="wrapper" class="site-content container-full-width">
 <?php responsive_mobile_wrapper_top(); // before wrapper content hook ?>

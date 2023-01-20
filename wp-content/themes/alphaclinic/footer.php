@@ -55,32 +55,6 @@ if ( ! defined( 'WPINC' ) ) {
 
 		<?php get_sidebar( 'colophon' ); ?>
 
-		<div id="footer-base">
-			<div class="copyright">
-				<?php
-					$copyright_text = '&copy; ' . date( 'Y' ) . ' <a href="' . home_url( '/' ) . '" title="' . esc_attr( get_bloginfo( 'name', 'display' ) ) . '">' . esc_attr( get_bloginfo( 'name' ) ) . '</a>';
-					$copyright_text = apply_filters( 'responsive_mobile_copyright_text', $copyright_text );
-					echo $copyright_text;
-				?>
-			</div><!-- .copyright -->
-
-			<div class="powered">
-				<?php
-					$powered_by_text = sprintf(
-						/* Translators: Responsive Theme powered by WordPress */
-						__( '%1$s powered by %2$s', 'responsive-mobile' ),
-						'<a href="' . esc_url( 'http://cyberchimps.com/responsive-II/' ) . '">' . __( 'Responsive II', 'responsive-mobile' ) . '</a>',
-						'<a href="' . esc_url( 'http://wordpress.org/' ) . '">' . __( 'WordPress', 'responsive-mobile' ) . '</a>'
-					);
-					$powered_by_text = apply_filters( 'responsive_mobile_powered_by_text', $powered_by_text );
-					echo $powered_by_text;
-				?>
-			</div><!-- end .powered -->
-
-			<div class="scroll-top">
-				<a href="#scroll-top" title="<?php esc_attr_e( 'scroll to top', 'responsive-mobile' ); ?>"><?php _e( '&uarr;', 'responsive-mobile' ); ?></a>
-			</div><!-- .scroll-top -->
-		</div><!-- #footer-base -->
 	</div><!-- #footer-wrapper -->
 	<?php responsive_mobile_footer_bottom(); ?>
 </footer><!-- #footer -->
