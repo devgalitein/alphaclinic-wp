@@ -417,7 +417,7 @@ add_shortcode('home-team-shortcode', 'home_team_shortcode');
 function home_team_shortcode(){
     $arguments = array(
         'post_type' => 'post',
-        'posts_per_page' => -1,
+        'posts_per_page' => 1,
         'orderby' => 'rand',
         'tax_query' => array(
             array(
