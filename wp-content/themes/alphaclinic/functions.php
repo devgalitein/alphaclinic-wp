@@ -412,3 +412,37 @@ function image_details($thumb_id){
 
     return $image_data;
 }
+
+add_shortcode('home-team-shortcode', 'home_team_shortcode');
+function home_team_shortcode(){
+    $arguments = array(
+        'post_type' => 'post',
+        'posts_per_page' => -1,
+        'orderby' => 'rand',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'slug',
+                'terms' => 'team',
+            )
+        )
+    );
+
+    $query = new WP_Query($arguments);
+    $html = "";
+    while ( $query->have_posts() ) : $query->the_post();
+        $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+        $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+        $thumb = get_the_post_thumbnail_url(get_the_ID());
+        $team_title = get_the_title();
+        $team_content = get_the_content();
+        $team_link = get_the_permalink();
+    $html .= '<div class="team-box-img">
+              <img src="'.$thumb.'" alt="'.$alt.'" />
+            </div>
+            <h3>'.$team_title.'</h3>
+            <p>'.$team_content.'</p>';
+    endwhile;
+    wp_reset_postdata();
+    return $html;
+}

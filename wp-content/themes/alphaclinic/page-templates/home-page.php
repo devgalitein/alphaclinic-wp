@@ -30,22 +30,24 @@ get_header(); ?>
             <?php /* Start the Loop */ ?>
             <?php while ( have_posts() ) : the_post(); ?>
 
-                <?php get_template_part( 'template-parts/content', 'page' ); ?>
                 <?php
-            $header_bg_1 = image_details(CFS()->get( 'background_image_1' ));
-            $header_bg_2 = image_details(CFS()->get( 'background_image_2' ));
-            $header_bg_3 = image_details(CFS()->get( 'background_image_3' ));
-            $header_bg_4 = image_details(CFS()->get( 'background_image_4' ));
+                $header_bg_1 = image_details(CFS()->get( 'background_image_1' ));
+                $header_bg_2 = image_details(CFS()->get( 'background_image_2' ));
+                $header_bg_3 = image_details(CFS()->get( 'background_image_3' ));
+                $header_bg_4 = image_details(CFS()->get( 'background_image_4' ));
 
-            $header_slider_array = [$header_bg_1, $header_bg_2, $header_bg_3, $header_bg_4];
-            ?>
-            <div class="main-banner-section">
-              <div class="slider">
-                  <?php foreach ($header_slider_array as $header_slider) {
-                echo '<div class="slide"><img src="'.$header_slider['url'][0].'" alt="'.$header_slider['alt'].'" /></div>';
-                 } ?>
-              </div>
-            </div>
+                $header_slider_array = [$header_bg_1, $header_bg_2, $header_bg_3, $header_bg_4];
+                ?>
+                <div class="main-banner-section">
+                    <div class="slider">
+                        <?php foreach ($header_slider_array as $header_slider) {
+                            echo '<div class="slide"><img src="'.$header_slider['url'][0].'" alt="'.$header_slider['alt'].'" /></div>';
+                        } ?>
+                    </div>
+                </div>
+                <div class="container">
+                <?php get_template_part( 'template-parts/content', 'page' ); ?>
+                </div>
              <?php endwhile; ?>
 
         <?php else : ?>
