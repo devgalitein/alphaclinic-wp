@@ -44,8 +44,8 @@ if ( ! defined( 'WPINC' ) ) {
 <body <?php body_class(); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
 <?php responsive_mobile_body_top(); ?>
 <div id="container" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'responsive-mobile' ); ?></a>
-	<a class="skip-link screen-reader-text" href="#main-navigation"><?php _e( 'Skip to main menu', 'responsive-mobile' ); ?></a>
+	<!-- <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'responsive-mobile' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#main-navigation"><?php _e( 'Skip to main menu', 'responsive-mobile' ); ?></a> -->
 
     <?php responsive_mobile_header_before(); ?>
     <div id="header_section">
