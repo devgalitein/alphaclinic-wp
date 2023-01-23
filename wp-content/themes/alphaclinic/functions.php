@@ -439,6 +439,7 @@ function home_team_shortcode(){
         $team_link = get_the_permalink();
     $html .= '<div class="team-box-img">
               <img src="'.$thumb.'" alt="'.$alt.'" />
+			  <img src="http://localhost/alphaclinic-wp/wp-content/uploads/2023/01/arrow.svg" class="team-box-img-arrow"/>
             </div>
             <h3>'.$team_title.'</h3>
             <p>'.$team_content.'</p>';

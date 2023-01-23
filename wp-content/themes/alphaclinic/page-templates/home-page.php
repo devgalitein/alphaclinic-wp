@@ -44,6 +44,14 @@ get_header(); ?>
                             echo '<div class="slide"><img src="'.$header_slider['url'][0].'" alt="'.$header_slider['alt'].'" /></div>';
                         } ?>
                     </div>
+                    <div class="banner-secction-text">
+                        <div class="container">
+                            <div class="banner-secction-text-inner">
+                                <img src="http://localhost/alphaclinic-wp/wp-content/uploads/2023/01/Star.svg"/>
+                                <h3>Sportmedizin. Gelenkschirurgie. Endoprothetik.</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="container">
                 <?php get_template_part( 'template-parts/content', 'page' ); ?>
