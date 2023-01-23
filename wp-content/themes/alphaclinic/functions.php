@@ -446,3 +446,6 @@ function home_team_shortcode(){
     wp_reset_postdata();
     return $html;
 }
+
+// Enable logo field in customise settings.
+add_theme_support( 'custom-logo' );

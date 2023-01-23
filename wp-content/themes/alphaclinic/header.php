@@ -70,9 +70,11 @@ if ( ! defined( 'WPINC' ) ) {
                         <!-- menu-trigger end-->
 
                         <div class="logo-part">
-                            <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                                <img class="logo--dark logo__img" src="<?php header_image(); ?>" alt="" itemprop="image"/>
-                            </a>
+                            <?php
+                            if ( function_exists( 'the_custom_logo' ) ) {
+                            the_custom_logo();
+                            }
+                            ?>
                         </div>
 
                         <div class="desktop-main-menu">
