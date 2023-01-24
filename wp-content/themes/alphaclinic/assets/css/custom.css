@@ -8,6 +8,9 @@ body {
 * {
     box-sizing: border-box;
 }
+a {
+    text-decoration:none;
+}
 .screen-reader-text {
     border: 0;
     clip: rect(1px,1px,1px,1px);
@@ -158,8 +161,47 @@ body {
 .header-menu-part ul li:last-child a {
     color: #FFFFFF;
 }
-
-
+.footer-section {
+    display: flex;
+   
+}
+.footer-column-1 {
+    width: 100%;
+}
+.footer-right-section {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    width: 100%;
+}
+.site-footer {
+    background: #00558E;
+    padding: 60px 0 140px;
+    margin-top:80px
+}
+.footer-right-section ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+.footer-right-section a, .footer-addresss {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    text-decoration:none;
+}
+.footer-social-icons {
+    display: flex;
+    gap: 12px;
+}
+.footer-kontakt a {
+    border: 1px solid #FFFFFF;
+    border-radius: 30px;
+    padding: 7px 15px;
+    display: block;
+}
 
 @media only screen and (min-width: 992px) {
     .hamburger {

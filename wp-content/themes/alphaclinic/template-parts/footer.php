@@ -22,42 +22,45 @@ $instagram = CFS()->get( 'instagram', 131 );
 $facebook = CFS()->get( 'facebook', 131 );
 $youtube = CFS()->get( 'youtube', 131 );
 ?>
+<div class="container">
 <div class="footer-section">
+    
+        <div class="footer-column-1">
+            <img src="<?php echo $footer_logo['url'][0]; ?>" alt="<?php echo $footer_logo['alt']; ?>">
+        </div>
+        <div class="footer-right-section">
+            <div class="footer-column-2">
+                <ul>
+                    <?php foreach ($footer_submenu as $slug => $submenu) {
+                    echo '<li><a href="'.$slug.'">'.$submenu.'</a></li>';
+                    } ?>
+                </ul>
+            </div>
 
-    <div class="footer-column-1">
-        <img src="<?php echo $footer_logo['url'][0]; ?>" alt="<?php echo $footer_logo['alt']; ?>">
-    </div>
+            <div class="footer-column-3">
+                <?php echo '<div class="footer-addresss">'.$footer_adress.'</div>';?>
+            </div>
 
-    <div class="footer-column-2">
-        <ul>
-            <?php foreach ($footer_submenu as $slug => $submenu) {
-               echo '<li><a href="'.$slug.'">'.$submenu.'</a></li>';
-            } ?>
-        </ul>
-    </div>
+            <div class="footer-column-4">
+                <?php echo '<div class="footer-kontakt">'.$footer_button.'</div>';?>
+            </div>
 
-    <div class="footer-column-3">
-        <?php echo '<div class="footer-addresss">'.$footer_adress.'</div>';?>
-    </div>
-
-    <div class="footer-column-4">
-        <?php echo '<div class="footer-kontakt">'.$footer_button.'</div>';?>
-    </div>
-
-    <div class="footer-column-5">
-        <div class="footer-social-icons">
-        <?php if ($twitter) {
-            echo '<a href="'.$twitter.'"><em class="fa fa-twitter"></em></a>';
-        }
-        if ($instagram) {
-            echo '<a href="'.$instagram.'"><em class="fa fa-instagram"></em></a>';
-        }
-        if ($facebook) {
-            echo '<a href="'.$facebook.'"><em class="fa fa-facebook"></em></a>';
-        }
-        if ($youtube) {
-            echo '<a href="'.$youtube.'"><em class="fa fa-youtube-play"></em></a>';
-        }?>
+            <div class="footer-column-5">
+                <div class="footer-social-icons">
+                <?php if ($twitter) {
+                    echo '<a href="'.$twitter.'"><em class="fa fa-twitter"></em></a>';
+                }
+                if ($instagram) {
+                    echo '<a href="'.$instagram.'"><em class="fa fa-instagram"></em></a>';
+                }
+                if ($facebook) {
+                    echo '<a href="'.$facebook.'"><em class="fa fa-facebook"></em></a>';
+                }
+                if ($youtube) {
+                    echo '<a href="'.$youtube.'"><em class="fa fa-youtube-play"></em></a>';
+                }?>
+                </div>
+            </div>
         </div>
     </div>
 
