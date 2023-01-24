@@ -28,34 +28,11 @@ if ( ! defined( 'WPINC' ) ) {
 
 <footer id="footer" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 	<?php responsive_mobile_footer_top(); ?>
+
 	<div id="footer-wrapper">
-
-		<div id="footer-widgets-container">
-			<?php get_sidebar( 'footer' ); ?>
-		</div><!-- #footer-widgets-container-->
-
-		<div id="menu-social-container">
-			<nav id="footer-menu-container">
-				<?php if ( has_nav_menu( 'footer-menu', 'responsive-mobile' ) ) {
-					wp_nav_menu(
-						array(
-							'container'      => '',
-							'fallback_cb'    => false,
-							'menu_class'     => 'footer-menu',
-							'theme_location' => 'footer-menu',
-							'depth'          => 1
-						)
-					);
-				} ?>
-			</nav><!-- #footer-menu -->
-			<div id="social-icons-container">
-				<?php echo responsive_mobile_get_social_icons() ?>
-			</div><!-- #social-icons-container-->
-		</div><!-- #menu-social-container -->
-
-		<?php get_sidebar( 'colophon' ); ?>
-
+        <?php get_template_part( 'template-parts/footer' ); ?>
 	</div><!-- #footer-wrapper -->
+
 	<?php responsive_mobile_footer_bottom(); ?>
 </footer><!-- #footer -->
 <?php responsive_mobile_footer_after(); ?>
