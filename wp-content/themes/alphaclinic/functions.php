@@ -438,11 +438,13 @@ function home_team_shortcode(){
         $team_content = get_the_content();
         $team_link = get_the_permalink();
     $html .= '<div class="team-box-img">
-              <img src="'.$thumb.'" alt="'.$alt.'" />
-			  <img src="http://localhost/alphaclinic-wp/wp-content/uploads/2023/01/arrow.svg" class="team-box-img-arrow"/>
-            </div>
-            <h3>'.$team_title.'</h3>
-            <p>'.$team_content.'</p>';
+                <a href="'.$team_link.'">
+                  <img src="'.$thumb.'" alt="'.$alt.'" />
+                  <img src="'.get_template_directory_uri().'/images/arrow.svg" class="team-box-img-arrow"/>
+                </a>
+              </div>
+              <a href="'.$team_link.'"><h3>'.$team_title.'</h3></a>
+              <p>'.$team_content.'</p>';
     endwhile;
     wp_reset_postdata();
     return $html;

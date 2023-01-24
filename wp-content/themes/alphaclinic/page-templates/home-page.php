@@ -35,20 +35,28 @@ get_header(); ?>
                 $header_bg_2 = image_details(CFS()->get( 'background_image_2' ));
                 $header_bg_3 = image_details(CFS()->get( 'background_image_3' ));
                 $header_bg_4 = image_details(CFS()->get( 'background_image_4' ));
-
                 $header_slider_array = [$header_bg_1, $header_bg_2, $header_bg_3, $header_bg_4];
+                $header_logo = image_details(CFS()->get( 'header_logo'));
+                $header_text = CFS()->get( 'header_text');
                 ?>
                 <div class="main-banner-section">
                     <div class="slider">
                         <?php foreach ($header_slider_array as $header_slider) {
-                            echo '<div class="slide"><img src="'.$header_slider['url'][0].'" alt="'.$header_slider['alt'].'" /></div>';
+                            if (!empty($header_slider['url'][0])) {
+                                echo '<div class="slide"><img src="' . $header_slider['url'][0] . '" alt="' . $header_slider['alt'] . '" /></div>';
+                            }
                         } ?>
                     </div>
                     <div class="banner-secction-text">
                         <div class="container">
                             <div class="banner-secction-text-inner">
-                                <img src="http://localhost/alphaclinic-wp/wp-content/uploads/2023/01/Star.svg"/>
-                                <h3>Sportmedizin. Gelenkschirurgie. Endoprothetik.</h3>
+                                <?php if ($header_logo) {
+                                    echo '<img src="'.$header_logo['url'][0].'"/>';
+                                }
+                                if ($header_text) {
+                                    echo '<h3>'.$header_text.'</h3>';
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
