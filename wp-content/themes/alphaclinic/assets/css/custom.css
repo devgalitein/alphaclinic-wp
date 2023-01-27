@@ -219,3 +219,114 @@ a {
 }
 
 /* top header part */
+
+.lg-hotspot {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    cursor: pointer;
+}
+.main-hotspot-part {
+    position:absolute;
+}
+.lg-hotspot__button {
+    position:relative;
+    height: 38px;
+    width: 38px;
+    padding: 0px;
+    border-radius: 100%;
+    z-index: 999;
+    background: #4BBCBB;
+    transition: 0.5s;
+}
+.lg-hotspot__button h3 {
+    position:relative;
+    color:#fff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom:0;
+}
+.lg-hotspot__button p{
+    color:#fff;
+    font-size: 15px;
+}
+.lg-hotspot__button:hover h3:after {
+    content: '';
+    width: 130px;
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    top: 55%;
+    left: -138px;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+.lg-hotspot__button:hover {
+    background: #fff;
+    transition: 0.1s;
+}
+.lg-hotspot__button-text {
+    position: absolute;
+    left: 175px;
+    display:none;
+    top: 15%;
+}
+.lg-hotspot__button:hover .lg-hotspot__button-text {
+    display:block
+}
+.lg-hotspot__button:hover:after, .lg-hotspot__button:hover:before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    content: "";
+    display: block;
+    height: 58px;
+    width: 58px;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: 0.3s;
+}
+.lg-hotspot__button:hover:after{
+    height: 78px;
+    width: 78px;
+}
+.wir-box-part {
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #8C8C8C;
+    padding:32px 36px;
+    background: #F0F0F0;
+    height: 100%;
+}
+.wir-box-part h3 {
+    font-size: 36px;
+    line-height: 49px;
+}
+.mystyle{
+    background: #0A5181;
+    color:#fff;
+}
+.philosophie-banner-section{
+    width: 100%;
+    display: block;
+    position: relative;
+}
+.philosophie-text {
+    width: 100%;
+    position: absolute;
+    top: 53%;
+    transform: translatey(-50%);
+}
+.mt-90{
+    margin-top: 90px;
+}
