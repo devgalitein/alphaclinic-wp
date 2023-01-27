@@ -453,3 +453,4 @@ function home_team_shortcode(){
 
 // Enable logo field in customise settings.
 add_theme_support( 'custom-logo' );
+add_theme_support( 'block-templates' );
