@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 get_header(); ?>
 
-	<div id="content-full" class="content-area">
+	<div id="content-full" class="content-area container">
 		<main id="main" class="site-main full-width" role="main">
 
 			<?php if ( have_posts() ) : ?>

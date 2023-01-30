@@ -409,7 +409,7 @@ function include_css_js(){
 function image_details($thumb_id){
     $image_data = [];
     $image_data['alt'] = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
-    $image_data['url'] = wp_get_attachment_image_src( $thumb_id);
+    $image_data['url'] = wp_get_attachment_image_src( $thumb_id, 'full');
 
     return $image_data;
 }

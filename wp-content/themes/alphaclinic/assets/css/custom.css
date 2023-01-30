@@ -330,3 +330,33 @@ a {
 .mt-90{
     margin-top: 90px;
 }
+.team-detail-header-section .team-detail-header-img {
+    width: 100%;
+}
+.team-detail-header-section {
+    position: relative;
+}
+.team-previous-icon {
+    position: absolute;
+    width: 26px;
+    height: 27px;
+    bottom: 48px;
+    left: 26px;
+}
+.team-next-icon {
+    position: absolute;
+    width: 26px;
+    height: 27px;
+    bottom: 48px;
+    right: 26px;
+}
+.team-detail-header-title{
+    position: absolute;
+    bottom: 32px;
+    font-size: 36px;
+    font-weight: 400;
+    color: #fff;
+}
+.team-detail-content{
+    margin-top: 121px;
+}
