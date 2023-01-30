@@ -21,20 +21,18 @@ get_header(); ?>
                 $header_img = image_details(CFS()->get( 'header_background_image' ));
                 $header_title = CFS()->get( 'header_title' );
                 ?>
-                <div class="container-fluid">
-                    <div class="team-banner-section">
-                        <div class="team-header-bg">
-                            <?php echo '<img src="' . $header_img['url'][0] . '" alt="' . $header_img['alt'] . '" />'; ?>
-                        </div>
-                        <div class="team-text">
-                            <div class="container">
-                                <div class="team-text-inner">
-                                   <?php
-                                    if ($header_title) {
-                                        echo '<h3>'.$header_title.'</h3>';
-                                    }
-                                    ?>
-                                </div>
+                <div class="team-banner-section">
+                    <div class="team-header-bg">
+                        <?php echo '<img src="' . $header_img['url'][0] . '" alt="' . $header_img['alt'] . '" />'; ?>
+                    </div>
+                    <div class="team-text">
+                        <div class="container">
+                            <div class="team-text-inner">
+                                <?php
+                                if ($header_title) {
+                                    echo '<h3>'.$header_title.'</h3>';
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>

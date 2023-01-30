@@ -330,6 +330,9 @@ a {
 .mt-90{
     margin-top: 90px;
 }
+.team-banner-section .team-header-bg img {
+    width: 100%;
+}
 .team-detail-header-section .team-detail-header-img {
     width: 100%;
 }
