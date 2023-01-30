@@ -321,6 +321,9 @@ a {
     display: block;
     position: relative;
 }
+.philosophie-banner-section .philosophie-header-bg img {
+    width: 100%;
+}
 .philosophie-text {
     width: 100%;
     position: absolute;
