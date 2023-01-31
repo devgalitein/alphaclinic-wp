@@ -437,6 +437,7 @@ function home_team_shortcode(){
         $thumb = get_the_post_thumbnail_url(get_the_ID());
         $team_title = get_the_title();
         $team_content = get_the_content();
+        $trimmed_content = wp_trim_words( $team_content, 50, '' );
         $team_link = get_the_permalink();
     $html .= '<div class="team-box-img">
                 <a href="'.$team_link.'">
@@ -445,7 +446,123 @@ function home_team_shortcode(){
                 </a>
               </div>
               <a href="'.$team_link.'"><h3>'.$team_title.'</h3></a>
-              <p>'.$team_content.'</p>';
+              <p>'.$trimmed_content.'</p>';
+    endwhile;
+    wp_reset_postdata();
+    return $html;
+}
+
+add_shortcode('home-treatment-shortcode', 'home_treatment_shortcode');
+function home_treatment_shortcode(){
+    $arguments = array(
+        'post_type' => 'post',
+        'posts_per_page' => 1,
+        'orderby' => 'rand',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'slug',
+                'terms' => 'was-wir-behandeln',
+            )
+        )
+    );
+
+    $query = new WP_Query($arguments);
+    $html = "";
+    while ( $query->have_posts() ) : $query->the_post();
+        $thumb = get_template_directory_uri().'/images/was-wir-behandeln-home.svg';
+        $treatment_title = get_the_title();
+        $treatment_content = get_the_content();
+        $trimmed_content = wp_trim_words( $treatment_content, 50, '' );
+        $treatment_link = get_the_permalink();
+        $html .= '<div class="team-box-img">
+                <a href="'.$treatment_link.'">
+                  <img src="'.$thumb.'" />
+                  <div class="main-hotspot-part"
+                         style="top: 22%; left: 50%">
+                        <div class="lg-hotspot__button">
+                            <div class="lg-hotspot__button-text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-hotspot-part"
+                       style="top: 27%; left: 60%">
+                        <div class="lg-hotspot__button">
+                            <div class="lg-hotspot__button-text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-hotspot-part"
+                         style="top: 40.2%; left: 50.8%">
+                        <div class="lg-hotspot__button">
+                            <div class="lg-hotspot__button-text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-hotspot-part"
+                         style="top: 47.2%; left: 47.2%">
+                        <div class="lg-hotspot__button">
+                            <div class="lg-hotspot__button-text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-hotspot-part"
+                         style="top: 62%; left: 36.5%">
+                        <div class="lg-hotspot__button">
+                            <div class="lg-hotspot__button-text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-hotspot-part"
+                         style="top: 89%; left: 29.5%">
+                        <div class="lg-hotspot__button">
+                            <div class="lg-hotspot__button-text">
+                            </div>
+                        </div>
+                    </div>
+                  <img src="'.get_template_directory_uri().'/images/arrow.svg" class="team-box-img-arrow"/>
+                </a>
+              </div>
+              <a href="'.$treatment_link.'"><h3>'.$treatment_title.'</h3></a>
+              <p>'.$trimmed_content.'</p>';
+    endwhile;
+    wp_reset_postdata();
+    return $html;
+}
+
+add_shortcode('home-aktuelles-shortcode', 'home_aktuelles_shortcode');
+function home_aktuelles_shortcode(){
+    $arguments = array(
+        'post_type' => 'post',
+        'posts_per_page' => 1,
+        'orderby' => 'rand',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'slug',
+                'terms' => 'aktuelles',
+            )
+        )
+    );
+
+    $query = new WP_Query($arguments);
+    $html = "";
+    while ( $query->have_posts() ) : $query->the_post();
+        $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+        $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+        $thumb = get_the_post_thumbnail_url(get_the_ID());
+        $aktuelles_title = get_the_title();
+        $aktuelles_content = get_the_content();
+        $trimmed_content = wp_trim_words( $aktuelles_content, 50, '' );
+        $aktuelles_link = home_url().'/aktuelles';
+        $html .= '<div class="team-box-img">
+                <a href="'.$aktuelles_link.'">
+                  <img src="'.$thumb.'" alt="'.$alt.'" />
+                  <img src="'.get_template_directory_uri().'/images/arrow.svg" class="team-box-img-arrow"/>
+                </a>
+              </div>
+              <a href="'.$aktuelles_link.'"><h3>'.$aktuelles_title.'</h3></a>
+              <p>'.$trimmed_content.'</p>';
     endwhile;
     wp_reset_postdata();
     return $html;
