@@ -479,7 +479,7 @@ function home_treatment_shortcode(){
                 <a href="'.$treatment_link.'">
                   <img src="'.$thumb.'" />
                   <div class="main-hotspot-part"
-                         style="top: 22%; left: 50%">
+                         style="top: 20%; left: 48%">
                         <div class="lg-hotspot__button">
                             <div class="lg-hotspot__button-text">
                             </div>
@@ -493,28 +493,28 @@ function home_treatment_shortcode(){
                         </div>
                     </div>
                     <div class="main-hotspot-part"
-                         style="top: 40.2%; left: 50.8%">
+                         style="top: 35.2%; left: 50.8%">
                         <div class="lg-hotspot__button">
                             <div class="lg-hotspot__button-text">
                             </div>
                         </div>
                     </div>
                     <div class="main-hotspot-part"
-                         style="top: 47.2%; left: 47.2%">
+                         style="top: 44.2%; left: 44.2%">
                         <div class="lg-hotspot__button">
                             <div class="lg-hotspot__button-text">
                             </div>
                         </div>
                     </div>
                     <div class="main-hotspot-part"
-                         style="top: 62%; left: 36.5%">
+                         style="top: 59%; left: 27.5%">
                         <div class="lg-hotspot__button">
                             <div class="lg-hotspot__button-text">
                             </div>
                         </div>
                     </div>
                     <div class="main-hotspot-part"
-                         style="top: 89%; left: 29.5%">
+                         style="top: 82%; left: 16.5%">
                         <div class="lg-hotspot__button">
                             <div class="lg-hotspot__button-text">
                             </div>

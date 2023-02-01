@@ -202,6 +202,10 @@ a {
     padding: 7px 15px;
     display: block;
 }
+.footer-kontakt a:hover {
+    background: #4BBCBB;
+    border: 1px solid #4BBCBB;
+}
 
 @media only screen and (min-width: 992px) {
     .hamburger {
@@ -307,10 +311,26 @@ a {
     padding:32px 36px;
     background: #F0F0F0;
     height: 100%;
+    position:relative;
+}
+.wir-box-part:hover {
+    background: #0A5181;  
+}
+.wir-box-part a {
+    position: absolute;
+    bottom: 16px;
+    right: 13px;
+    opacity: 0.5;
+}
+.wir-box-part a:hover {
+    opacity:1;
 }
 .wir-box-part h3 {
     font-size: 36px;
     line-height: 49px;
+}
+.wir-box-part:hover h3, .wir-box-part:hover p{
+    color:#fff;
 }
 .mystyle{
     background: #0A5181;
