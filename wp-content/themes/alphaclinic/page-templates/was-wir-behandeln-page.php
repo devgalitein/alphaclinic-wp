@@ -65,7 +65,7 @@ get_header(); ?>
                     </div>
                     <div class="main-hotspot-part"
                          style="top: 47.2%; left: 47.2%">
-                        <div class="lg-hotspot__button">
+                        <div class="lg-hotspot__button right-side-open">
                             <div class="lg-hotspot__button-text">
                                 <h3>'.$joint_title_4.'</h3>
                                 <p>'.$joint_description_4.'<p>
@@ -74,7 +74,7 @@ get_header(); ?>
                     </div>
                     <div class="main-hotspot-part"
                          style="top: 62%; left: 36.5%">
-                        <div class="lg-hotspot__button">
+                        <div class="lg-hotspot__button right-side-open">
                             <div class="lg-hotspot__button-text">
                                 <h3>'.$joint_title_5.'</h3>
                                 <p>'.$joint_description_5.'<p>
@@ -83,7 +83,7 @@ get_header(); ?>
                     </div>
                     <div class="main-hotspot-part"
                          style="top: 89%; left: 29.5%">
-                        <div class="lg-hotspot__button">
+                        <div class="lg-hotspot__button right-side-open">
                             <div class="lg-hotspot__button-text">
                                 <h3>'.$joint_title_6.'</h3>
                                 <p>'.$joint_description_6.'<p>
