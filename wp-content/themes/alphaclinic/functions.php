@@ -475,56 +475,34 @@ function home_treatment_shortcode(){
         $treatment_content = get_the_content();
         $trimmed_content = wp_trim_words( $treatment_content, 50, '' );
         $treatment_link = get_the_permalink();
+        if($treatment_title == 'Schulter') {
+           $style = "top: 20%; left: 48%";
+        } elseif($treatment_title == 'Ellbogen') {
+            $style = "top: 27%; left: 60%";
+        } elseif($treatment_title == 'Wirbelsäule') {
+            $style = "top: 35.2%; left: 50.8%";
+        } elseif($treatment_title == 'Hüfte') {
+            $style = "top: 44.2%; left: 44.2%";
+        } elseif($treatment_title == 'Knie') {
+            $style = "top: 59%; left: 27.5%";
+        } elseif($treatment_title == 'Fuss') {
+            $style = "top: 82%; left: 16.5%";
+        }
         $html .= '<div class="team-box-img">
-                <a href="'.$treatment_link.'">
-                  <img src="'.$thumb.'" />
-                  <div class="main-hotspot-part"
-                         style="top: 20%; left: 48%">
-                        <div class="lg-hotspot__button">
-                            <div class="lg-hotspot__button-text">
+                    <a href="'.$treatment_link.'">
+                        <img src="'.$thumb.'" />
+                        <div class="main-hotspot-part"
+                           style="'.$style.'">
+                            <div class="lg-hotspot__button">
+                                <div class="lg-hotspot__button-text">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="main-hotspot-part"
-                       style="top: 27%; left: 60%">
-                        <div class="lg-hotspot__button">
-                            <div class="lg-hotspot__button-text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-hotspot-part"
-                         style="top: 35.2%; left: 50.8%">
-                        <div class="lg-hotspot__button">
-                            <div class="lg-hotspot__button-text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-hotspot-part"
-                         style="top: 44.2%; left: 44.2%">
-                        <div class="lg-hotspot__button">
-                            <div class="lg-hotspot__button-text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-hotspot-part"
-                         style="top: 59%; left: 27.5%">
-                        <div class="lg-hotspot__button">
-                            <div class="lg-hotspot__button-text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-hotspot-part"
-                         style="top: 82%; left: 16.5%">
-                        <div class="lg-hotspot__button">
-                            <div class="lg-hotspot__button-text">
-                            </div>
-                        </div>
-                    </div>
-                  <img src="'.get_template_directory_uri().'/images/arrow.svg" class="team-box-img-arrow"/>
-                </a>
-              </div>
-              <a href="'.$treatment_link.'"><h3>'.$treatment_title.'</h3></a>
-              <p>'.$trimmed_content.'</p>';
+                        <img src="'.get_template_directory_uri().'/images/arrow.svg" class="team-box-img-arrow"/>
+                    </a>
+                  </div>
+                  <a href="'.$treatment_link.'"><h3>'.$treatment_title.'</h3></a>
+                  <p>'.$trimmed_content.'</p>';
     endwhile;
     wp_reset_postdata();
     return $html;
