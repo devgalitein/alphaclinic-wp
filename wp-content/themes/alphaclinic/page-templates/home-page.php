@@ -38,6 +38,7 @@ get_header(); ?>
                 $header_slider_array = [$header_bg_1, $header_bg_2, $header_bg_3, $header_bg_4];
                 $header_logo = image_details(CFS()->get( 'header_logo'));
                 $header_text = CFS()->get( 'header_text');
+                $header_logo_display = CFS()->get( 'header_logo_display');
                 ?>
                 <div class="main-banner-section">
                     <div class="slider">
@@ -50,7 +51,7 @@ get_header(); ?>
                     <div class="banner-secction-text">
                         <div class="container">
                             <div class="banner-secction-text-inner">
-                                <?php if ($header_logo) {
+                                <?php if ($header_logo_display == 1 && $header_logo) {
                                     echo '<img src="'.$header_logo['url'][0].'"/>';
                                 }
                                 if ($header_text) {
