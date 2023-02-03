@@ -470,7 +470,7 @@ function home_treatment_shortcode(){
     $query = new WP_Query($arguments);
     $html = "";
     while ( $query->have_posts() ) : $query->the_post();
-        $thumb = get_template_directory_uri().'/images/was-wir-behandeln-home.svg';
+        $thumb = get_template_directory_uri().'/images/was-wir-behandeln-home.png';
         $treatment_title = get_the_title();
         $treatment_content = get_the_content();
         $trimmed_content = wp_trim_words( $treatment_content, 50, '' );
