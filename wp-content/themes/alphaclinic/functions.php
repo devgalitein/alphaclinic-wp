@@ -440,7 +440,7 @@ function home_team_shortcode(){
         $trimmed_content = wp_trim_words( $team_content, 50, '' );
         $team_link = get_the_permalink();
     $html .= '<div class="team-box-img">
-                <a href="'.$team_link.'">
+                <a href="javascript:void(0)">
                   <img src="'.$thumb.'" alt="'.$alt.'" />
                   <img src="'.get_template_directory_uri().'/images/arrow.svg" class="team-box-img-arrow"/>
                 </a>
@@ -489,7 +489,7 @@ function home_treatment_shortcode(){
             $style = "top: 82%; left: 16.5%";
         }
         $html .= '<div class="team-box-img">
-                    <a href="'.$treatment_link.'">
+                    <a href="javascript:void(0)">
                         <img src="'.$thumb.'" />
                         <div class="main-hotspot-part"
                            style="'.$style.'">
@@ -534,7 +534,7 @@ function home_aktuelles_shortcode(){
         $trimmed_content = wp_trim_words( $aktuelles_content, 50, '' );
         $aktuelles_link = home_url().'/aktuelles';
         $html .= '<div class="team-box-img">
-                <a href="'.$aktuelles_link.'">
+                <a href="javascript:void(0)">
                   <img src="'.$thumb.'" alt="'.$alt.'" />
                   <img src="'.get_template_directory_uri().'/images/arrow.svg" class="team-box-img-arrow"/>
                 </a>
