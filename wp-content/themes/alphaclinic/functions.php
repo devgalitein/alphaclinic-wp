@@ -554,8 +554,7 @@ add_shortcode('team-shortcode', 'team_shortcode');
 function team_shortcode() {
     $arguments = array(
         'post_type' => 'post',
-        'posts_per_page' => 1,
-        'orderby' => 'rand',
+        'posts_per_page' => -1,
         'tax_query' => array(
             array(
                 'taxonomy' => 'category',
@@ -566,7 +565,10 @@ function team_shortcode() {
     );
 
     $query = new WP_Query($arguments);
+    $teams = [];
     $html = "";
+    $numOfCols = 3;
+    $rowCount = 0;
     while ( $query->have_posts() ) : $query->the_post();
         $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
         $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
@@ -575,40 +577,35 @@ function team_shortcode() {
         $team_content = get_the_content();
         $trimmed_content = wp_trim_words( $team_content, 50, '' );
         $team_link = get_the_permalink();
+        $teams[] = [
+            'team_title' => $team_title,
+            'team_content' => $trimmed_content,
+            'team_link' => $team_link,
+            'thumb' => $thumb,
+            'alt' =>$alt,
+        ];
     endwhile;
     wp_reset_postdata();
 
-    $html .= '<div class="team-section container">
-             <div class="grid-container">
-                <div class="box-img1"><img src="team_1.svg"></div>
-                <div class="box-content1">Patrick Vavken
-                   PD Dr. med. Patrick Vavken
-                   Facharzt FMH für Orthopädische Chirurgie und Traumatologie, spez. Schulter und Ellbogen. 
-                   FA Interventionelle Schmerztherapie SSIPM. FA Sportmedizin SGSM
-                </div>
-                <div class="box-img2"><img src="team_1.svg"></div>
-                <div class="box-content2">Patrick Vavken
-                   PD Dr. med. Patrick Vavken
-                   Facharzt FMH für Orthopädische Chirurgie und Traumatologie, spez. Schulter und Ellbogen. 
-                   FA Interventionelle Schmerztherapie SSIPM. FA Sportmedizin SGSM
-                </div>
-                <div class="box-img3"><img src="team_1.svg"></div>
-                <div class="box-content3">Patrick Vavken
-                   PD Dr. med. Patrick Vavken
-                   Facharzt FMH für Orthopädische Chirurgie und Traumatologie, spez. Schulter und Ellbogen. 
-                   FA Interventionelle Schmerztherapie SSIPM. FA Sportmedizin SGSM
-                </div>
-             </div>
-             
-             
-             <div class="grid-container">
-                <div class="box-img1"><img src="team_1.svg"></div>
-                <div class="box-content1">Patrick Vavken
-                   PD Dr. med. Patrick Vavken
-                   Facharzt FMH für Orthopädische Chirurgie und Traumatologie, spez. Schulter und Ellbogen. 
-                   FA Interventionelle Schmerztherapie SSIPM. FA Sportmedizin SGSM
-                </div>
-             </div>
-          </div>';
+    $html .= '<div class="team-section container">';
+                foreach ($teams as $team){
+                    if($rowCount % $numOfCols == 0) {
+                        $html .= '<div class="grid-container">';
+                        $i = 1;
+                    }
+                    $rowCount++;
+                    $html .='<div class="box-img'.$i.'">
+                                <img src="'.$team['thumb'].'" alt="'.$team['alt'].'">
+                            </div>
+                            <div class="box-content'.$i.'">'.$team['team_title'].'
+                                '.$team['team_content'].'
+                            </div>';
+                        if($rowCount % $numOfCols == 0) {
+                            $html .= '</div>';
+                        }
+                    $i++;
+                }
+    $html .= '</div>';
+
     return $html;
 }
