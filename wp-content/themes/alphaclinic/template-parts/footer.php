@@ -48,16 +48,16 @@ $youtube = CFS()->get( 'youtube', 131 );
             <div class="footer-column-5">
                 <div class="footer-social-icons">
                 <?php if ($twitter) {
-                    echo '<a href="'.$twitter.'"><em class="fa fa-twitter"></em></a>';
+                    echo '<a href="'.$twitter.'"><img src="'.get_template_directory_uri().'/images/twitter.png"/></a>';
                 }
                 if ($instagram) {
-                    echo '<a href="'.$instagram.'"><em class="fa fa-instagram"></em></a>';
+                    echo '<a href="'.$instagram.'"><img src="'.get_template_directory_uri().'/images/instagram.png"/></em></a>';
                 }
                 if ($facebook) {
-                    echo '<a href="'.$facebook.'"><em class="fa fa-facebook"></em></a>';
+                    echo '<a href="'.$facebook.'"><img src="'.get_template_directory_uri().'/images/facebook.png"/></a>';
                 }
                 if ($youtube) {
-                    echo '<a href="'.$youtube.'"><em class="fa fa-youtube-play"></em></a>';
+                    echo '<a href="'.$youtube.'"><img src="'.get_template_directory_uri().'/images/youtube.png"/></a>';
                 }?>
                 </div>
             </div>
