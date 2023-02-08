@@ -552,9 +552,15 @@ add_theme_support( 'block-templates' );
 
 add_shortcode('team-shortcode', 'team_shortcode');
 function team_shortcode() {
+    $counter_team_member = CFS()->get( 'counter_team_member' );
+    if ($counter_team_member) {
+        $count = $counter_team_member;
+    } else {
+        $count = -1;
+    }
     $arguments = array(
         'post_type' => 'post',
-        'posts_per_page' => -1,
+        'posts_per_page' => $count,
         'tax_query' => array(
             array(
                 'taxonomy' => 'category',
@@ -575,7 +581,7 @@ function team_shortcode() {
         $thumb = get_the_post_thumbnail_url(get_the_ID());
         $team_title = get_the_title();
         $team_content = get_the_content();
-        $trimmed_content = wp_trim_words( $team_content, 50, '' );
+        $trimmed_content = wp_trim_words( $team_content, 12, '' );
         $team_link = get_the_permalink();
         $teams[] = [
             'team_title' => $team_title,

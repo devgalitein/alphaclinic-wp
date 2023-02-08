@@ -20,6 +20,8 @@ get_header(); ?>
             <?php while ( have_posts() ) : the_post();
                 $header_img = image_details(CFS()->get( 'header_background_image' ));
                 $header_title = CFS()->get( 'header_title' );
+                $body_title = CFS()->get( 'body_title' );
+                $description = CFS()->get( 'description' );
                 ?>
                 <div class="page-banner">
                     <div class="page-banner-inner">
@@ -34,7 +36,14 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="container">
-                    <?php get_template_part( 'template-parts/content', 'page' ); ?>
+                    <?php
+                    if ($body_title) {
+                        echo '<h4 class="team-listing-title">'.$body_title.'</h4>';
+                    }
+                    if ($description) {
+                        echo '<p class="team-listing-desc">'.$description.'</p>';
+                    }
+                    get_template_part( 'template-parts/content', 'page' ); ?>
                 </div>
             <?php endwhile; ?>
 
