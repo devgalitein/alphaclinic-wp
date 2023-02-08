@@ -46,6 +46,29 @@ if ( ! defined( 'WPINC' ) ) {
 <div id="container" class="site">
 	<!-- <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'responsive-mobile' ); ?></a>
 	<a class="skip-link screen-reader-text" href="#main-navigation"><?php _e( 'Skip to main menu', 'responsive-mobile' ); ?></a> -->
+    <!-- menu dropdown start - for mobile-->
+    <div class="mobile-menu-container">
+        <div class="menu-dropdown" style="background-color: #fff;">
+            <div class="menu-dropdown__inner" data-value="start">
+                <div class="screen screen--start">
+                    <div class="close-mobile-menu"  aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </div>
+                    <?php wp_nav_menu(
+                        array(
+                            'container'      => 'ul',
+                            'fallback_cb'    => false,
+                            'menu_class'     => 'main-menu',
+                            'list_item_class'  => 'main-menu__item',
+                            'link_class'   => 'main-menu__link',
+                            'theme_location' => 'header-menu',
+                            'depth'          => 2
+                        )
+                    ); ?>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <?php responsive_mobile_header_before(); ?>
     <div id="header_section">
@@ -60,15 +83,6 @@ if ( ! defined( 'WPINC' ) ) {
                 </div>
                 <div class="custom-container-1352">
                     <div class="second-header">
-                        <!-- menu-trigger start-->
-                        <div class="hamburger">
-                            <div class="hamburger-box">
-                                <!--                            <div class="hamburger-inner"></div>-->
-                                <img src="<?php echo get_theme_file_uri().'/images/hamburger.svg'?>">
-                            </div>
-                        </div>
-                        <!-- menu-trigger end-->
-
                         <div class="logo-part">
                             <?php
                             if ( function_exists( 'the_custom_logo' ) ) {
@@ -76,6 +90,20 @@ if ( ! defined( 'WPINC' ) ) {
                             }
                             ?>
                         </div>
+                        <?php if ( is_active_sidebar( 'last-menu-item-widget' ) ) :?>
+                            <div class="mobile-last-menu">
+                                <?php dynamic_sidebar( 'last-menu-item-widget' ); ?>
+                            </div>
+                        <?php endif; ?>
+                        <!-- menu-trigger start-->
+                        <div class="hamburger">
+                            <div class="hamburger-box">
+                                <!--                            <div class="hamburger-inner"></div>-->
+                                <img class="menu-open" src="<?php echo get_theme_file_uri().'/images/hamburger.svg'?>">
+                                <i class="fa fa-times menu-close" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <!-- menu-trigger end-->
 
                         <div class="desktop-main-menu">
                             <div class="header-menu-part">
@@ -92,6 +120,9 @@ if ( ! defined( 'WPINC' ) ) {
                                     )
                                 ); ?>
                                 <!-- main menu end-->
+                                <?php if ( is_active_sidebar( 'last-menu-item-widget' ) ) :?>
+                                    <?php dynamic_sidebar( 'last-menu-item-widget' ); ?>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>

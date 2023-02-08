@@ -615,3 +615,13 @@ function team_shortcode() {
 
     return $html;
 }
+
+register_sidebar(array(
+        'name' => 'Last header menu item',
+        'id' => 'last-menu-item-widget',
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    )
+);

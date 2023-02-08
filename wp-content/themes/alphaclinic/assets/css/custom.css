@@ -153,14 +153,14 @@ a {
 .header-menu-part ul li {
   padding: 18px 0;
 }
-.header-menu-part ul li:last-child {
-  margin-left: 6px;
-  padding: 18px 32px;
-  background: #00578e;
-}
-.header-menu-part ul li:last-child a {
-  color: #ffffff;
-}
+/*.header-menu-part ul li:last-child {*/
+/*  margin-left: 6px;*/
+/*  padding: 18px 32px;*/
+/*  background: #00578e;*/
+/*}*/
+/*.header-menu-part ul li:last-child a {*/
+/*  color: #ffffff;*/
+/*}*/
 .footer-section {
   display: flex;
 }
@@ -519,4 +519,94 @@ a {
 }
 .grid-container img {
   width:100%;
+}
+.menu-dropdown {
+  display: initial;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+  background: #fff;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.desktop-main-menu {
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .menu-dropdown {
+    display: none;
+  }
+  .desktop-main-menu {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+.menu-dropdown__inner {
+  /*position: fixed;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*overflow-y: auto;*/
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.menu-dropdown--active {
+  visibility: visible;
+  opacity: 1;
+}
+.menu-dropdown--active .menu-dropdown__inner--active,
+.menu-dropdown--active .menu-dropdown__inner:first-of-type {
+  visibility: visible;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  height: 100%;
+}
+.menu-dropdown--active {
+  visibility:visible;
+  opacity:1
+}
+.menu-dropdown--active .menu-dropdown__inner--active,.menu-dropdown--active .menu-dropdown__inner:first-of-type{
+  visibility:visible;
+  -webkit-transform:translateX(0);
+  -ms-transform:translateX(0);transform:translateX(0);
+}
+.mobile-last-menu{
+  display: none;
+}
+@media only screen and (max-width: 992px) {
+  .banner-secction-text-inner img {
+    display: none;
+  }
+  .hamburger .menu-close {
+    display: none;
+  }
+  .mobile-last-menu{
+    display: block;
+  }
+}
+.last-menu-item{
+  margin-left: 6px;
+  padding: 18px 32px;
+  background: #00578e;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+.last-menu-item:hover {
+  color: #fff;
+}
+.header-menu-part{
+  display: inline-flex;
 }
