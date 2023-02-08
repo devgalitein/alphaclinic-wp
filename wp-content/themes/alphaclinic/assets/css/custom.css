@@ -404,3 +404,119 @@ a {
     color: #8C8C8C;
     text-transform: capitalize;
 }
+.joint-details-page-section {
+  background: #00578E;
+  padding: 80px 0;
+}
+.joint-details-page-header {
+  display: flex;
+  gap: 270px;
+}
+.joint-details-page-header h3 {
+  font-size: 36px;
+  line-height: 49px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+.header-right-text ul {
+  list-style-type: none;
+  font-size: 24px;
+  line-height: 33px;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+.header-right-text ul li a{
+  color: #FFFFFF;
+}
+.behandeln-detials-content {
+  padding:80px 0;
+}
+.behandeln-detials-title {
+  margin-bottom:38px;
+}
+.behandeln-detials-title h3 {
+  font-size: 36px;
+  line-height: 49px;
+  color: #00558E;
+}
+.behandeln-detials-title p {
+  font-size: 20px;
+  line-height: 27px;
+  color: #8C8C8C;
+  margin-top:16px;
+}
+.behandeln-detials-title h3 span {
+  display: block;
+}
+.behandeln-detials-title h3:focus {
+  outline: none;
+}
+.behandeln-detials-box h3 {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: #8C8C8C;
+}
+.behandeln-detials-box p {
+  font-size: 15px;
+  line-height: 20px;
+  color: #8C8C8C;
+}
+.behandeln-detials-content:nth-child(2n) {
+  background: #F0F0F0;
+}
+.post-template-single-was-wir-behandeln .site-footer{
+  margin-top: 0;
+}
+
+.page-banner {
+  height:100%
+}
+.page-banner-inner {
+  position: relative;
+}
+.page-banner-inner .banner-text{
+  position: absolute;
+  bottom: 15px;
+  color: #FFFFFF;
+  font-size: 36px;
+  line-height: 49px;
+  text-transform: capitalize;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.page-banner-inner img {
+  width:100%;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.box-img1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.box-content1 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.box-img2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+.box-content2 {
+  grid-column: 3;
+  grid-row: 2;
+}
+.box-img3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.box-content3 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.grid-container img {
+  width:100%;
+}

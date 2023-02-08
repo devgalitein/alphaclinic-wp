@@ -549,3 +549,66 @@ function home_aktuelles_shortcode(){
 // Enable logo field in customise settings.
 add_theme_support( 'custom-logo' );
 add_theme_support( 'block-templates' );
+
+add_shortcode('team-shortcode', 'team_shortcode');
+function team_shortcode() {
+    $arguments = array(
+        'post_type' => 'post',
+        'posts_per_page' => 1,
+        'orderby' => 'rand',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'slug',
+                'terms' => 'team',
+            )
+        )
+    );
+
+    $query = new WP_Query($arguments);
+    $html = "";
+    while ( $query->have_posts() ) : $query->the_post();
+        $thumbnail_id = get_post_thumbnail_id( get_the_ID() );
+        $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+        $thumb = get_the_post_thumbnail_url(get_the_ID());
+        $team_title = get_the_title();
+        $team_content = get_the_content();
+        $trimmed_content = wp_trim_words( $team_content, 50, '' );
+        $team_link = get_the_permalink();
+    endwhile;
+    wp_reset_postdata();
+
+    $html .= '<div class="team-section container">
+             <div class="grid-container">
+                <div class="box-img1"><img src="team_1.svg"></div>
+                <div class="box-content1">Patrick Vavken
+                   PD Dr. med. Patrick Vavken
+                   Facharzt FMH für Orthopädische Chirurgie und Traumatologie, spez. Schulter und Ellbogen. 
+                   FA Interventionelle Schmerztherapie SSIPM. FA Sportmedizin SGSM
+                </div>
+                <div class="box-img2"><img src="team_1.svg"></div>
+                <div class="box-content2">Patrick Vavken
+                   PD Dr. med. Patrick Vavken
+                   Facharzt FMH für Orthopädische Chirurgie und Traumatologie, spez. Schulter und Ellbogen. 
+                   FA Interventionelle Schmerztherapie SSIPM. FA Sportmedizin SGSM
+                </div>
+                <div class="box-img3"><img src="team_1.svg"></div>
+                <div class="box-content3">Patrick Vavken
+                   PD Dr. med. Patrick Vavken
+                   Facharzt FMH für Orthopädische Chirurgie und Traumatologie, spez. Schulter und Ellbogen. 
+                   FA Interventionelle Schmerztherapie SSIPM. FA Sportmedizin SGSM
+                </div>
+             </div>
+             
+             
+             <div class="grid-container">
+                <div class="box-img1"><img src="team_1.svg"></div>
+                <div class="box-content1">Patrick Vavken
+                   PD Dr. med. Patrick Vavken
+                   Facharzt FMH für Orthopädische Chirurgie und Traumatologie, spez. Schulter und Ellbogen. 
+                   FA Interventionelle Schmerztherapie SSIPM. FA Sportmedizin SGSM
+                </div>
+             </div>
+          </div>';
+    return $html;
+}
