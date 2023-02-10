@@ -695,6 +695,12 @@ font-size: 15px;
 line-height: 20px;
 color: #8C8C8C;
 }
+.team-detail-content strong {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: #8C8C8C;
+}
 .team-detail-content ul { 
   padding-left: 1.5rem;
 }
