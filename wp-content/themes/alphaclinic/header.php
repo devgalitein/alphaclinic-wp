@@ -99,8 +99,11 @@ if ( ! defined( 'WPINC' ) ) {
                         <div class="hamburger">
                             <div class="hamburger-box">
                                 <!--                            <div class="hamburger-inner"></div>-->
-                                <img class="menu-open" src="<?php echo get_theme_file_uri().'/images/hamburger.svg'?>">
-                                <i class="fa fa-times menu-close" aria-hidden="true"></i>
+                               <?php /* <img class="menu-open" src="<?php echo get_theme_file_uri().'/images/hamburger.svg'?>">
+                                <i class="fa fa-times menu-close" aria-hidden="true"></i>  */ ?>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
                         </div>
                         <!-- menu-trigger end-->

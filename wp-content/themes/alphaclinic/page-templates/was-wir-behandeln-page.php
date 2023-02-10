@@ -111,7 +111,7 @@ get_header(); ?>
                             <?php
                             foreach ($joint_boxes as $joint_box) {
                             ?>
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-lg-4">
                                 <div class="wir-box-part">
                                     <h3><?php echo $joint_box['joint_box_title']; ?></h3>
                                     <p><?php echo $joint_box['joint_box_description']; ?></p>
