@@ -19,7 +19,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('mt-90'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('p-tb-90'); ?>>
 	<?php responsive_mobile_entry_top(); ?>
 
 	<?php get_template_part( 'template-parts/post-meta-page' );

@@ -36,6 +36,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="container">
+                    <div class="p-tb-90">
                     <?php
                     if ($body_title) {
                         echo '<h4 class="team-listing-title">'.$body_title.'</h4>';
@@ -43,7 +44,10 @@ get_header(); ?>
                     if ($description) {
                         echo '<p class="team-listing-desc">'.$description.'</p>';
                     }
-                    get_template_part( 'template-parts/content', 'page' ); ?>
+                    the_content();
+//                    get_template_part( 'template-parts/content', 'page' );
+                    ?>
+                    </div>
                 </div>
             <?php endwhile; ?>
 

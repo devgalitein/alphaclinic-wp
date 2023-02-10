@@ -201,18 +201,14 @@ a {
 .footer-kontakt a {
   border: 1px solid #ffffff;
   border-radius: 30px;
-  padding: 7px 15px;
-  display: block;
+  padding: 8px 26px;
 }
 .footer-kontakt a:hover {
   background: #4bbcbb;
   border: 1px solid #4bbcbb;
 }
 
-
-
 /* top header part */
-
 .lg-hotspot {
   position: absolute;
   margin: 0;
@@ -423,9 +419,9 @@ a {
 .header-right-text ul li a{
   color: #FFFFFF;
 }
-/* .behandeln-detials-content {
+ .behandeln-detials-content {
   padding:90px 0;
-} */
+}
 .behandeln-detials-title {
   margin-bottom:38px;
 }
@@ -686,6 +682,7 @@ text-transform: capitalize;
   font-size: 20px;
   line-height: 27px;
   color: #8C8C8C;
+  margin-bottom: 60px;
 }
 .team-detail-content p:first-child {
   font-weight: 700;
@@ -723,7 +720,9 @@ color: #8C8C8C;
   opacity: 1;
   cursor: pointer;
 }
-
+.p-tb-90 {
+  padding:90px 0
+}
 
 @media only screen and (max-width: 1440px) {
   .main-hotspot-part .right-side-open .lg-hotspot__button-text  {
@@ -821,11 +820,11 @@ color: #8C8C8C;
   .grid-container .box-content h3 {
     font-size: 28px;
   }
-  .team-listing-title { 
-    margin-top: 80px;
-  }
   .second-header {
     justify-content: inherit;
+  }
+  .p-tb-90 {
+    padding: 45px 0;
   }
 }
 @media only screen and (min-width: 992px) {

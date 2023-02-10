@@ -47,7 +47,7 @@ get_header();
                         </div>
                    </div>
                    <div class="container">
-                       <div class="team-detail-content">
+                       <div class="team-detail-content p-tb-90">
                             <?php the_content(); ?>
                        </div>
                    </div>
@@ -57,6 +57,5 @@ get_header();
 
      </main><!-- #main -->
 
- <?php get_sidebar(); ?>
 </div><!-- #content -->
 <?php get_footer(); ?>

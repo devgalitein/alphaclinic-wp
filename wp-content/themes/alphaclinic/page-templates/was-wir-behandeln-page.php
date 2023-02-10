@@ -105,7 +105,7 @@ get_header(); ?>
                     ];
                 }
                 ?>
-                <div class="wir-box-min mt-90">
+                <div class="wir-box-min p-tb-90">
                     <div class="container">
                         <div class="row g-4">
                             <?php
@@ -122,9 +122,9 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <?php get_template_part( 'template-parts/content', 'page' ); ?>
-                </div>
+<!--                <div class="container">-->
+<!--                    --><?php //get_template_part( 'template-parts/content', 'page' ); ?>
+<!--                </div>-->
 
             <?php endwhile; ?>
 
