@@ -77,9 +77,9 @@ a {
   opacity: 1;
   cursor: pointer;
 }
-.home-box-section {
+/* .home-box-section {
   margin-top: 90px;
-}
+} */
 .home-box-section h2 {
   font-weight: 700;
   font-size: 15px;
@@ -175,7 +175,7 @@ a {
 .site-footer {
   background: #00558e;
   padding: 60px 0 140px;
-  margin-top: 80px;
+  /* margin-top: 90px; */
 }
 .footer-right-section ul {
   list-style-type: none;
@@ -390,9 +390,9 @@ a {
   font-weight: 400;
   color: #fff;
 }
-.team-detail-content {
-  margin-top: 121px;
-}
+/* .team-detail-content {
+  margin-top: 90px;
+} */
 .map-title{
     font-weight: 300;
     font-size: 24px;
@@ -423,9 +423,9 @@ a {
 .header-right-text ul li a{
   color: #FFFFFF;
 }
-.behandeln-detials-content {
-  padding:80px 0;
-}
+/* .behandeln-detials-content {
+  padding:90px 0;
+} */
 .behandeln-detials-title {
   margin-bottom:38px;
 }
@@ -512,6 +512,7 @@ a {
 .box-content3 {
   grid-column: 1;
   grid-row: 2;
+  text-align: right;
 }
 .grid-container img {
   width:100%;
@@ -639,7 +640,7 @@ a {
 .hamburger.open .hamburger-box span {
   opacity: 1;
   transform: rotate(45deg) translate(0px, -2px);
-  background: #232323;
+  background: #00578e;
 }
 .hamburger.open .hamburger-box span:nth-last-child(2) {
   opacity: 0;
@@ -662,6 +663,10 @@ a {
   background: #F0F0F0;
   color: #8C8C8C;
 }
+.grid-container .box-content:hover {
+  background: #00558E;
+  color:#FFFFFF;
+}
 .grid-container .box-content h3 {
   font-size: 36px;
 line-height: 49px;
@@ -675,7 +680,7 @@ text-transform: capitalize;
   font-size: 20px;
   line-height: 27px;
   color: #00558E;
-  margin-top: 120px;
+  /* margin-top: 90px; */
 }
 .team-listing-desc {
   font-size: 20px;
@@ -755,6 +760,7 @@ color: #8C8C8C;
   }
   .mobile-last-menu{
     display: block;
+    margin-left: auto;
   }
   .joint-details-page-header {
     display: flex;
@@ -818,6 +824,9 @@ color: #8C8C8C;
   .team-listing-title { 
     margin-top: 80px;
   }
+  .second-header {
+    justify-content: inherit;
+  }
 }
 @media only screen and (min-width: 992px) {
   .menu-dropdown {
@@ -856,6 +865,7 @@ color: #8C8C8C;
     margin-top: 0;
     font-size: 26px;
     line-height: 32px;
+    color: #8c8c8c;
   }
   .footer-section {
     flex-direction: column;
@@ -957,5 +967,13 @@ color: #8C8C8C;
     padding: 0 30px;
     text-align: center;
     line-height: normal;
+}
+.banner-secction-text {
+  position:inherit;
+  transform:inherit;
+  margin-top:30px
+}
+.banner-secction-text-inner {
+  max-width:100%
 }
 }
