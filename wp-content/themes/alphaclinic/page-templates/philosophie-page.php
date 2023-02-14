@@ -20,6 +20,7 @@ get_header(); ?>
             <?php while ( have_posts() ) : the_post();
                 $header_img = image_details(CFS()->get( 'header_background_image' ));
                 $header_icon = image_details(CFS()->get( 'header_icon' ));
+                $header_logo_display = CFS()->get( 'header_logo_display');
                 $header_title = CFS()->get( 'header_title' );
                ?>
                 <div class="philosophie-banner-section">
@@ -29,7 +30,7 @@ get_header(); ?>
                     <div class="philosophie-text">
                         <div class="container">
                             <div class="philosophie-text-inner">
-                                <?php if ($header_icon) {
+                                <?php if ($header_logo_display == 1 && $header_icon) {
                                     echo '<img src="'.$header_icon['url'][0].'"/>';
                                 }
                                 if ($header_title) {
