@@ -653,8 +653,9 @@ function ajax_load_first_news() {
     $newsID = $_POST['newsID'];
     $aktuelles_title = get_the_title($newsID);
     $aktuelles_content = get_the_content(null, false, $newsID);
+    $date = strtotime(get_the_date('Y-m-d', $newsID));
     $html = '<div class="aktuelles-detials-title">
-                 <h3><span>Montag, 15. Februar 2023</span>' . $aktuelles_title . '</h3>
+                 <h3><span>'.date_i18n("l, d. F Y", $date).'</span>' . $aktuelles_title . '</h3>
                  <p>' . $aktuelles_content . '</p>
             </div>';
     echo json_encode(array('success' => true, 'html' => $html)); die;
@@ -681,8 +682,9 @@ function ajax_load_other_news() {
     $query = new WP_Query($arguments);
     $html = '<div class="row">';
     while ($query->have_posts()) : $query->the_post();
+        $date = strtotime(get_the_date('Y-m-d'));
         $html .= '<div class="col-md-4 news-sub-section" data-post-id="'.get_the_ID().'">
-                       <h3><span>Montag, 15. Februar 2023</span>'.get_the_title().'</h3>
+                       <h3><span>'.date_i18n("l, d. F Y", $date).'</span>'.get_the_title().'</h3>
                        <p>'.get_the_content().'</p>
                   </div>';
     endwhile;

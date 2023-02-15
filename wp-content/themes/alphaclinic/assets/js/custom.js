@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
     }
     menuTrigger();
 
-    $(".news-sub-section").click(function(e) {
+    $( "body" ).on( "click", ".news-sub-section", function() {
        var newsID = $(this).data('post-id');
         $.ajax({
             type: 'POST',
@@ -59,9 +59,9 @@ jQuery(document).ready(function ($) {
                 'newsID': newsID
             },
             success: function(data) {
-                $(".details-box").html(data.html);
+                $(".aktuelles-detials-box").html(data.html);
             }
-        })
+        });
     });
 
 });

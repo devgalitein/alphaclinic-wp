@@ -62,8 +62,9 @@ get_header(); ?>
                             while ($query->have_posts()) : $query->the_post();
                             $aktuelles_title = get_the_title();
                             $aktuelles_content = get_the_content();
+                            $date = strtotime(get_the_date('Y-m-d'));
                             $html .= '<div class="aktuelles-detials-title">
-                                        <h3><span>Montag, 15. Februar 2023</span>' . $aktuelles_title . '</h3>
+                                        <h3><span>'.date_i18n("l, d. F Y", $date).'</span>' . $aktuelles_title . '</h3>
                                         <p>' . $aktuelles_content . '</p>
                                       </div>';
                             endwhile;
@@ -90,13 +91,14 @@ get_header(); ?>
 
                                     $query = new WP_Query($arguments);
                                     while ($query->have_posts()) : $query->the_post();
-                                    ?>
-                                    <div class="col-md-4 news-sub-section" data-post-id="<?php echo get_the_ID(); ?>">
-                                        <h3>
-                                            <span>Montag, 15. Februar 2023</span><?php echo get_the_title(); ?>
-                                        </h3>
-                                        <p><?php echo get_the_content(); ?></p>
-                                    </div>
+                                        $date = strtotime(get_the_date('Y-m-d'));
+                                        ?>
+                                        <div class="col-md-4 news-sub-section" data-post-id="<?php echo get_the_ID(); ?>">
+                                            <h3>
+                                                <span><?php echo date_i18n("l, d. F Y", $date); ?></span><?php echo get_the_title(); ?>
+                                            </h3>
+                                            <p><?php echo get_the_content(); ?></p>
+                                        </div>
                                     <?php
                                     endwhile;
                                     wp_reset_postdata();
