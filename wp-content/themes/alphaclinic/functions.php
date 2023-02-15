@@ -552,7 +552,7 @@ function home_aktuelles_shortcode()
         $trimmed_content = wp_trim_words($aktuelles_content, 50, '');
         $aktuelles_link = home_url() . '/aktuelles';
         $html .= '<div class="team-box-img">
-                <a href="javascript:void(0)">
+                <a href="' . $aktuelles_link . '">
                   <img src="' . $thumb . '" alt="' . $alt . '" />
                   <img src="' . get_template_directory_uri() . '/images/arrow.svg" class="team-box-img-arrow"/>
                 </a>
