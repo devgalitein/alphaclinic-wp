@@ -748,7 +748,9 @@ color: #8C8C8C;
   font-size: 20px;
   line-height: 27px;
   color: #8c8c8c;
-  margin-bottom: 65px;
+}
+.aktuelles-detials-title {
+  margin-bottom: 85px;
 }
 .aktuelles-detials-box h3 span {
   font-weight: 700;
@@ -924,7 +926,7 @@ line-height: 20px;
     display: block;
     font-weight: 700;
   }
-  .banner-secction-text-inner img {
+  .banner-secction-text-inner img, .page-banner-inner .banner-inner-logo {
     display: none;
   }
   .hamburger .menu-close {
