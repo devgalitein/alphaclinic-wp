@@ -723,7 +723,49 @@ color: #8C8C8C;
 .p-tb-90 {
   padding:90px 0
 }
-
+.banner-inner-logo {
+  position: absolute;
+  right: 36px;
+  bottom: 0;
+}
+.aktuelles-detials-title h3 {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 49px;
+  color: #00558e;
+  margin-bottom: 32px;
+}
+.aktuelles-detials-title h3 span {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #8c8c8c;
+  display: block;
+}
+.aktuelles-detials-title p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #8c8c8c;
+  margin-bottom: 65px;
+}
+.aktuelles-detials-box h3 span {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: #8c8c8c;
+  display: block;
+}
+.aktuelles-detials-box h3 {
+  font-size: 20px;
+  color: #00558e;
+}
+.aktuelles-detials-box p {
+  color: #8c8c8c;
+  font-size: 15px;
+  margin-top: 32px;
+}
 @media only screen and (max-width: 1440px) {
   .main-hotspot-part .right-side-open .lg-hotspot__button-text  {
     width: 260px;
