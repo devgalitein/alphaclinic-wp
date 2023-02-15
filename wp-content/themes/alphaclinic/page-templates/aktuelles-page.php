@@ -40,9 +40,72 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
-                <div class="container">
-                    <?php get_template_part( 'template-parts/content', 'page' ); ?>
-                </div>
+                <main>
+                    <div class="aktuelles-main-section p-tb-90">
+                        <div class="container">
+                            <?php
+                            $arguments = array(
+                            'post_type' => 'post',
+                            'posts_per_page' => 1,
+                            'orderby' => 'DESC',
+                            'tax_query' => array(
+                                    array(
+                                    'taxonomy' => 'category',
+                                    'field' => 'slug',
+                                    'terms' => 'aktuelles',
+                                    )
+                                )
+                            );
+
+                            $query = new WP_Query($arguments);
+                            $html = '';
+                            while ($query->have_posts()) : $query->the_post();
+                            $aktuelles_title = get_the_title();
+                            $aktuelles_content = get_the_content();
+                            $html .= '<div class="aktuelles-detials-title">
+                                        <h3><span>Montag, 15. Februar 2023</span>' . $aktuelles_title . '</h3>
+                                        <p>' . $aktuelles_content . '</p>
+                                      </div>';
+                            endwhile;
+                            wp_reset_postdata();
+                            echo $html;
+                            ?>
+                            <div class="aktuelles-detials-box">
+                                <div class="row">
+                                    <?php
+                                    $arguments = array(
+                                    'post_type' => 'post',
+                                    'posts_per_page' => 50,
+                                    'orderby'        => 'date',
+                                    'order'          => 'DESC',
+                                    'offset'         => 1,
+                                    'tax_query' => array(
+                                            array(
+                                            'taxonomy' => 'category',
+                                            'field' => 'slug',
+                                            'terms' => 'aktuelles',
+                                            )
+                                        )
+                                    );
+
+                                    $query = new WP_Query($arguments);
+                                    while ($query->have_posts()) : $query->the_post();
+                                    ?>
+                                    <div class="col-md-4 news-sub-section" data-post-id="<?php echo get_the_ID(); ?>">
+                                        <h3>
+                                            <span>Montag, 15. Februar 2023</span><?php echo get_the_title(); ?>
+                                        </h3>
+                                        <p><?php echo get_the_content(); ?></p>
+                                    </div>
+                                    <?php
+                                    endwhile;
+                                    wp_reset_postdata();
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
 
             <?php endwhile; ?>
 

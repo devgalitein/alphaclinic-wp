@@ -646,3 +646,47 @@ register_sidebar(
         'after_title' => '</h3>',
     )
 );
+
+add_action('wp_ajax_load_first_news', 'ajax_load_first_news');
+add_action('wp_ajax_nopriv_load_first_news', 'ajax_load_first_news');
+function ajax_load_first_news() {
+    $newsID = $_POST['newsID'];
+    $aktuelles_title = get_the_title($newsID);
+    $aktuelles_content = get_the_content(null, false, $newsID);
+    $html = '<div class="aktuelles-detials-title">
+                 <h3><span>Montag, 15. Februar 2023</span>' . $aktuelles_title . '</h3>
+                 <p>' . $aktuelles_content . '</p>
+            </div>';
+    echo json_encode(array('success' => true, 'html' => $html)); die;
+}
+
+add_action('wp_ajax_load_other_news', 'ajax_load_other_news');
+add_action('wp_ajax_nopriv_load_other_news', 'ajax_load_other_news');
+function ajax_load_other_news() {
+    $newsID = $_POST['newsID'];
+    $arguments = array(
+        'post_type' => 'post',
+        'posts_per_page' => 50,
+        'orderby' => 'DESC',
+        'post__not_in'  => array($newsID),
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'slug',
+                'terms' => 'aktuelles',
+            )
+        )
+    );
+
+    $query = new WP_Query($arguments);
+    $html = '<div class="row">';
+    while ($query->have_posts()) : $query->the_post();
+        $html .= '<div class="col-md-4 news-sub-section" data-post-id="'.get_the_ID().'">
+                       <h3><span>Montag, 15. Februar 2023</span>'.get_the_title().'</h3>
+                       <p>'.get_the_content().'</p>
+                  </div>';
+    endwhile;
+    wp_reset_postdata();
+    $html .='</div>';
+    echo json_encode(array('success' => true, 'html' => $html)); die;
+}

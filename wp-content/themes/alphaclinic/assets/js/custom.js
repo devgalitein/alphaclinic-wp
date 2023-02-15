@@ -36,5 +36,33 @@ jQuery(document).ready(function ($) {
     }
     menuTrigger();
 
+    $(".news-sub-section").click(function(e) {
+       var newsID = $(this).data('post-id');
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            dataType: 'json',
+            data: {
+                'action': 'load_first_news',
+                'newsID': newsID
+            },
+            success: function(data) {
+                $(".aktuelles-detials-title").html(data.html);
+            }
+        });
+        $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            dataType: 'json',
+            data: {
+                'action': 'load_other_news',
+                'newsID': newsID
+            },
+            success: function(data) {
+                $(".details-box").html(data.html);
+            }
+        })
+    });
+
 });
 

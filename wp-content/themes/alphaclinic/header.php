@@ -38,7 +38,10 @@ if ( ! defined( 'WPINC' ) ) {
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 		<?php responsive_mobile_head_bottom(); ?>
 
-		<?php wp_head(); ?>
+		<?php wp_head();
+        $ajax_url = site_url()."/wp-admin/admin-ajax.php";
+        ?>
+        <script> ajaxurl = "<?php echo $ajax_url; ?>";</script>
 	</head>
 
 <body <?php body_class(); ?> itemscope="itemscope" itemtype="http://schema.org/WebPage">
