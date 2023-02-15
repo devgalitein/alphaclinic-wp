@@ -23,21 +23,20 @@ get_header(); ?>
                 $header_logo_display = CFS()->get( 'header_logo_display');
                 $header_title = CFS()->get( 'header_title' );
                ?>
-                <div class="philosophie-banner-section">
-                    <div class="philosophie-header-bg">
+                <div class="page-banner">
+                    <div class="page-banner-inner">
                         <?php echo '<img src="' . $header_img['url'][0] . '" alt="' . $header_img['alt'] . '" />'; ?>
-                    </div>
-                    <div class="philosophie-text">
-                        <div class="container">
-                            <div class="philosophie-text-inner">
-                                <?php if ($header_logo_display == 1 && $header_icon) {
-                                    echo '<img src="'.$header_icon['url'][0].'"/>';
-                                }
-                                if ($header_title) {
-                                    echo '<h3>'.$header_title.'</h3>';
-                                }
-                                ?>
-                            </div>
+                        <div class="banner-inner-logo">
+                            <?php if ($header_logo_display == 1 && $header_icon) {
+                                echo '<img src="'.$header_icon['url'][0].'" class="img-fluid"/>';
+                            } ?>
+                        </div>
+                        <div class="container banner-text">
+                            <?php
+                            if ($header_title) {
+                                echo '<p>'.$header_title.'</p>';
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

@@ -470,10 +470,10 @@ a {
 .page-banner-inner .banner-text{
   position: absolute;
   bottom: 15px;
-  color: #FFFFFF;
-  font-size: 36px;
-  line-height: 49px;
-  text-transform: capitalize;
+  color: #FFFFFF!important;
+  font-size: 36px!important;
+  line-height: 49px!important;
+  text-transform: capitalize!important;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -890,7 +890,7 @@ line-height: 20px;
   font-family: "Nunito Sans", sans-serif;
   margin-top:18px;
 }
-.page-template-philosophie-page p{
+.page-template-philosophie-page .post-entry p{
   font-size: 20px;
   line-height: 27px;
   color: #8C8C8C;
