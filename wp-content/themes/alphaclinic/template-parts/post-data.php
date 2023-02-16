@@ -53,8 +53,5 @@ if ( ! defined( 'WPINC' ) ) {
 	$responsive_options = responsive_mobile_get_options();
 		if($responsive_options['blog_posts_index_layout_default']!=="three-column-posts")
 		{ ?>
-	<div class="entry-meta">
-		<?php edit_post_link( __( 'Edit', 'responsive-mobile' ), '<span class="post-edit">', '</span>' ); ?>
-	</div><!-- .entry-meta -->
 	<?php } ?>
 </footer><!-- .post-data -->
