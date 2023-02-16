@@ -88,5 +88,12 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    $('.cf-message').on('input', function(){
+        if ( $(this).val().length > 0 ) {
+            $('.contact-textarea label').css("opacity", "0");
+        } else {
+            $('.contact-textarea label').css("opacity", "1");
+        }
+    });
 });
 
