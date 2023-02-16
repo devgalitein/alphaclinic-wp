@@ -39,6 +39,5 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
-			<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 <?php get_footer(); ?>
