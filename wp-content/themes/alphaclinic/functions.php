@@ -550,7 +550,7 @@ function home_aktuelles_shortcode()
         $aktuelles_title = get_the_title();
         $aktuelles_content = get_the_content();
         $trimmed_content = wp_trim_words($aktuelles_content, 50, '');
-        $aktuelles_link = home_url() . '/aktuelles';
+        $aktuelles_link = home_url() . '/aktuelles?pid='.get_the_ID();
         $html .= '<div class="team-box-img">
                 <a href="' . $aktuelles_link . '">
                   <img src="' . $thumb . '" alt="' . $alt . '" />
