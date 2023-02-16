@@ -874,6 +874,9 @@ line-height: 20px;
   color: #00558E;
   margin-bottom: 32px;
 }
+.page-template-philosophie-page h2:not(:first-child) {
+  margin-top: 41px;
+}
 .form-btn-part p {
   text-align:right;
 }
