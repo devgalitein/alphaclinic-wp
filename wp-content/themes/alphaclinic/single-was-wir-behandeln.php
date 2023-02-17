@@ -63,7 +63,7 @@ get_header();
                                         } elseif ($grid == '3 columns') {
                                             $layout = "col-md-4";
                                         } elseif ($grid == '4 columns') {
-                                            $layout = "col-md-3";
+                                            $layout = "col-md-6";
                                         }
                                     }
                                     $column_boxes = [];
