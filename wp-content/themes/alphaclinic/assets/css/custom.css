@@ -636,7 +636,7 @@ a {
 .hamburger.open .hamburger-box span {
   opacity: 1;
   transform: rotate(45deg) translate(0px, -2px);
-  background: #00578e;
+  background: #cdcdcd;
 }
 .hamburger.open .hamburger-box span:nth-last-child(2) {
   opacity: 0;
@@ -959,7 +959,7 @@ line-height: 20px;
     margin: 0;
   }
   .menu-dropdown__inner ul li a {
-    color: #5c5a5a;
+    color: #8c8c8c;
     font-size: 30px;
     text-align: right;
     display: block;
