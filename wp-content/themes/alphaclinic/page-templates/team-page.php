@@ -29,7 +29,7 @@ get_header(); ?>
                         <div class="container banner-text">
                             <?php
                             if ($header_title) {
-                                echo '<h4>'.$header_title.'</h4>';
+                                echo '<p>'.$header_title.'</p>';
                             }
                             ?>
                         </div>
