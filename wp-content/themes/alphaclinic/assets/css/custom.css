@@ -303,7 +303,7 @@ a {
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.05em;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
   color: #8c8c8c;
   padding: 32px 36px;
   background: #f0f0f0;
