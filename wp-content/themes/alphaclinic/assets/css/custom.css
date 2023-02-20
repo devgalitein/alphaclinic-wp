@@ -659,7 +659,7 @@ a {
   background: #F0F0F0;
   color: #8C8C8C;
 }
-.grid-container .box-content:hover {
+.grid-container .box-content:hover, .grid-container .team-hover {
   background: #00558E;
   color:#FFFFFF;
 }
@@ -964,6 +964,7 @@ line-height: 20px;
     text-align: right;
     display: block;
     font-weight: 700;
+    text-transform: uppercase;
   }
   .banner-secction-text-inner img, .page-banner-inner .banner-inner-logo {
     display: none;

@@ -95,5 +95,11 @@ jQuery(document).ready(function ($) {
             $('.contact-textarea label').css("opacity", "1");
         }
     });
+
+    $(".box-img").on('mouseenter', function () {
+        $(this).next('div').addClass("team-hover");
+    }).mouseleave(function() {
+        $(this).next('div').removeClass("team-hover");
+    });
 });
 
