@@ -870,11 +870,11 @@ input:-webkit-autofill:active{
   outline: none;
 }
 .wpcf7-not-valid-tip {
-  margin: 5px 0px;
+  margin: 10px 0px;
 }
-/*.wpcf7-form.invalid .contact-first-part p, .wpcf7-form.invalid .contact-second-part p{*/
-/*  margin-bottom: 26px;*/
-/*}*/
+.wpcf7-form.invalid .contact-first-part p, .wpcf7-form.invalid .contact-second-part p{
+  margin-bottom: 35px;
+}
 h4.contact-second-title {
   font-weight: 700;
   font-size: 20px;
