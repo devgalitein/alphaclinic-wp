@@ -36,7 +36,7 @@ get_header(); ?>
                     <img src="<?php echo $header_img['url'][0]; ?>" width="100%" />
                     <?php
                     echo '<div class="main-hotspot-part"
-                         style="top: 22%; left: 50%">
+                         style="top: 22%; left: 50%" data-hotspot="joint1">
                         <div class="lg-hotspot__button">
                             <div class="lg-hotspot__button-text">
                                 <h3>'.$joint_title_2.'</h3>
@@ -44,18 +44,17 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-                    <a href="#myDIV" class="main-hotspot-part"
-                       style="top: 27%; left: 60%" onclick="myFunction()"
-                    >
+                    <div class="main-hotspot-part"
+                       style="top: 27%; left: 60%" data-hotspot="joint2">
                         <div class="lg-hotspot__button">
                             <div class="lg-hotspot__button-text">
                                 <h3>'.$joint_title_1.'</h3>
                                 <p>'.$joint_description_1.'<p>
                             </div>
                         </div>
-                    </a>
+                    </div>
                     <div class="main-hotspot-part"
-                         style="top: 40.2%; left: 50.8%">
+                         style="top: 40.2%; left: 50.8%" data-hotspot="joint3">
                         <div class="lg-hotspot__button">
                             <div class="lg-hotspot__button-text">
                                 <h3>'.$joint_title_3.'</h3>
@@ -64,7 +63,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="main-hotspot-part"
-                         style="top: 47.2%; left: 47.2%">
+                         style="top: 47.2%; left: 47.2%" data-hotspot="joint4">
                         <div class="lg-hotspot__button right-side-open">
                             <div class="lg-hotspot__button-text">
                                 <h3>'.$joint_title_4.'</h3>
@@ -73,7 +72,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="main-hotspot-part"
-                         style="top: 62%; left: 36.5%">
+                         style="top: 62%; left: 36.5%" data-hotspot="joint5">
                         <div class="lg-hotspot__button right-side-open">
                             <div class="lg-hotspot__button-text">
                                 <h3>'.$joint_title_5.'</h3>
@@ -82,13 +81,43 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="main-hotspot-part"
-                         style="top: 89%; left: 29.5%">
+                         style="top: 89%; left: 29.5%" data-hotspot="joint6">
                         <div class="lg-hotspot__button right-side-open">
                             <div class="lg-hotspot__button-text">
                                 <h3>'.$joint_title_6.'</h3>
                                 <p>'.$joint_description_6.'<p>
                             </div>
                         </div>
+                    </div>
+                    <div class="popup" id="joint1">
+                        <h3>'.$joint_title_2.'</h3>
+                        <p>'.$joint_description_2.'</p>
+                        <div class="close-joint" data-hotspot="joint1">Close</div>
+                    </div>
+                    <div class="popup" id="joint2">
+                        <h3>'.$joint_title_1.'</h3>
+                        <p>'.$joint_description_1.'</p>
+                        <div class="close-joint" data-hotspot="joint2">Close</div>
+                    </div>
+                    <div class="popup" id="joint3">
+                        <h3>'.$joint_title_3.'</h3>
+                        <p>'.$joint_description_3.'</p>
+                        <div class="close-joint" data-hotspot="joint3">Close</div>
+                    </div>
+                     <div class="popup" id="joint4">
+                        <h3>'.$joint_title_4.'</h3>
+                        <p>'.$joint_description_4.'</p>
+                        <div class="close-joint" data-hotspot="joint4">Close</div>
+                    </div>                   
+                    <div class="popup" id="joint5">
+                        <h3>'.$joint_title_5.'</h3>
+                        <p>'.$joint_description_5.'</p>
+                        <div class="close-joint" data-hotspot="joint5">Close</div>
+                    </div>
+                    <div class="popup" id="joint6">
+                        <h3>'.$joint_title_6.'</h3>
+                        <p>'.$joint_description_6.'</p>
+                        <div class="close-joint" data-hotspot="joint6">Close</div>
                     </div>';
                     ?>
                 </div>

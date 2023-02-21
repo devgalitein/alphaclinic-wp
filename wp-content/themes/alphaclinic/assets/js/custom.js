@@ -101,5 +101,16 @@ jQuery(document).ready(function ($) {
     }).mouseleave(function() {
         $(this).next('div').removeClass("team-hover");
     });
+
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        $('.main-hotspot-part').on('click', function () {
+            var hotspot = $(this).data('hotspot');
+            jQuery('#' + hotspot).show();
+        });
+        $('.close-joint').on('click', function () {
+            var hotspot = $(this).data('hotspot');
+            jQuery('#' + hotspot).hide();
+        })
+    }
 });
 

@@ -939,6 +939,38 @@ line-height: 20px;
 .form-btn-part .wpcf7-submit {
   float: right;
 }
+.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 50%;
+  left: 30%;
+  top: 30%;
+  background: #FFF;
+  z-index: 9;
+}
+
+#joint1:after, #joint2:after, #joint3:after, #joint4:after, #joint5:after, #joint6:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+}
+
+#joint1:before, #joint2:before, #joint3:before, #joint4:before, #joint5:before, #joint6:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  z-index: -1;
+}
 @media only screen and (max-width: 1440px) {
   .main-hotspot-part .right-side-open .lg-hotspot__button-text  {
     width: 260px;
