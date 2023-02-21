@@ -875,6 +875,7 @@ input:-webkit-autofill:active{
 .wpcf7-form.invalid .contact-first-part p, .wpcf7-form.invalid .contact-second-part p{
   margin-bottom: 35px;
 }
+
 h4.contact-second-title {
   font-weight: 700;
   font-size: 20px;
