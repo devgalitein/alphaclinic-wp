@@ -102,7 +102,7 @@ jQuery(document).ready(function ($) {
         $(this).next('div').removeClass("team-hover");
     });
 
-    if (window.matchMedia("(max-width: 767px)").matches) {
+    if (window.matchMedia("(max-width: 1180px)").matches) {
         $('.main-hotspot-part').on('click', function () {
             var hotspot = $(this).data('hotspot');
             jQuery('#' + hotspot).show();
