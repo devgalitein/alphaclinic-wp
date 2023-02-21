@@ -823,7 +823,7 @@ span.wpcf7-form-control-wrap input {
 .contact-textarea p > span {
   width: calc(100% - 40px);
   position: absolute;
-  height: 122px;
+  height: 129px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -969,6 +969,15 @@ line-height: 20px;
   right: 0;
   background: #FFF;
   z-index: -1;
+}
+.wpcf7-not-valid-tip {
+  position:absolute;
+}
+.wpcf7-form.invalid .contact-first-part p:last-child, .wpcf7-form.invalid .contact-second-part-inner p:last-child {
+  margin-bottom:0;
+}
+.invalid .contact-textarea p > span {
+  height: 138px;
 }
 @media only screen and (max-width: 1440px) {
   .main-hotspot-part .right-side-open .lg-hotspot__button-text  {
@@ -1221,5 +1230,33 @@ line-height: 20px;
 }
 .banner-secction-text-inner {
   max-width:100%
+}
+.contact-first-part, .contact-second-part {
+  flex-direction:column;
+  gap:0
+}
+.contact-second-part-inner{
+  margin-bottom: 18px;
+}
+.invalid .contact-second-part-inner{
+  margin-bottom: 35px;
+}
+.contact-textarea p{
+    height:135px
+}
+.contact-textarea label {
+  bottom: 45px;
+}
+.form-btn-part input {
+  margin-top:0;
+}
+.invalid .contact-textarea p > span {
+  height: 120px;
+}
+/* .contact-first-part {
+  margin-bottom:18px;
+} */
+.invalid .contact-first-part {
+  margin-bottom:35px;
 }
 }
