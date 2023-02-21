@@ -106,10 +106,12 @@ jQuery(document).ready(function ($) {
         $('.main-hotspot-part').on('click', function () {
             var hotspot = $(this).data('hotspot');
             jQuery('#' + hotspot).show();
+            $('body').addClass("joint-popup-open")
         });
         $('.close-joint').on('click', function () {
             var hotspot = $(this).data('hotspot');
             jQuery('#' + hotspot).hide();
+            $('body').removeClass("joint-popup-open")
         })
     }
 });

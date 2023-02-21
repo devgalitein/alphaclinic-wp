@@ -90,34 +90,70 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="popup" id="joint1">
-                        <h3>'.$joint_title_2.'</h3>
-                        <p>'.$joint_description_2.'</p>
-                        <div class="close-joint" data-hotspot="joint1">Close</div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>'.$joint_title_2.'</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>'.$joint_description_2.'</p>
+                            </div>
+                            <div class="modal-footer close-joint" data-hotspot="joint1"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                        </div>
                     </div>
                     <div class="popup" id="joint2">
-                        <h3>'.$joint_title_1.'</h3>
-                        <p>'.$joint_description_1.'</p>
-                        <div class="close-joint" data-hotspot="joint2">Close</div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>'.$joint_title_1.'</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>'.$joint_description_1.'</p>
+                            </div>
+                            <div class="modal-footer close-joint" data-hotspot="joint2"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                        </div>
                     </div>
                     <div class="popup" id="joint3">
-                        <h3>'.$joint_title_3.'</h3>
-                        <p>'.$joint_description_3.'</p>
-                        <div class="close-joint" data-hotspot="joint3">Close</div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>'.$joint_title_3.'</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>'.$joint_description_3.'</p>
+                            </div>
+                            <div class="modal-footer close-joint" data-hotspot="joint3"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                        </div>
                     </div>
                      <div class="popup" id="joint4">
-                        <h3>'.$joint_title_4.'</h3>
-                        <p>'.$joint_description_4.'</p>
-                        <div class="close-joint" data-hotspot="joint4">Close</div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>'.$joint_title_4.'</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>'.$joint_description_4.'</p>
+                            </div>
+                            <div class="modal-footer close-joint" data-hotspot="joint4"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                        </div>
                     </div>                   
                     <div class="popup" id="joint5">
-                        <h3>'.$joint_title_5.'</h3>
-                        <p>'.$joint_description_5.'</p>
-                        <div class="close-joint" data-hotspot="joint5">Close</div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>'.$joint_title_5.'</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>'.$joint_description_5.'</p>
+                            </div>
+                            <div class="modal-footer close-joint" data-hotspot="joint5"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                        </div>
                     </div>
                     <div class="popup" id="joint6">
-                        <h3>'.$joint_title_6.'</h3>
-                        <p>'.$joint_description_6.'</p>
-                        <div class="close-joint" data-hotspot="joint6">Close</div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>'.$joint_title_6.'</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>'.$joint_description_6.'</p>
+                            </div>
+                            <div class="modal-footer close-joint" data-hotspot="joint6"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                        </div>
                     </div>';
                     ?>
                 </div>
