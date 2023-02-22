@@ -112,6 +112,6 @@ body.login p.submit input#wp-submit:hover{
 	background-color: #4bbcbb;
 	color: #fff;
 }
-.login .language-switcher{
+.login .language-switcher, .login .privacy-policy-page-link{
 	display: none;
 }
