@@ -1,0 +1,117 @@
+body.login div#login h1 a {
+	background-image: url('images/Logo.png');
+	/*background-size:cover;*/
+	/*background-color:rgba(0, 0, 0, 0.85);*/
+	background-position:center center;
+	height: 110px;
+	width: 175px !important;
+	background-size: 145px;
+}
+
+body.login div#login {
+	background-color: #00558e;
+	overflow: hidden;
+	padding: 30px;
+}
+.login h1 {
+	text-align: center;
+}
+.login a {
+	text-decoration: underline!important;
+	color: #000;
+}
+body.login {
+	background-image:  url("images/background-admin.png");
+	padding: 70px 0 0;
+	box-sizing: border-box;
+}
+body.login div#login form {
+	background-color: rgba(0, 0, 0, 0);
+	box-shadow: none;
+	margin: 0;
+	padding: 5px;
+	border: none;
+}
+body.login div#login form#loginform input#user_login {
+	padding-left: 10px !important;
+}
+body.login div#login form#loginform input#user_pass {
+	padding-left: 10px !important;
+}
+body.login div#login form#loginform p label, .login label{
+	color: #fff;
+}
+body.login p.submit input#wp-submit {
+	background-color: #fff;
+	border: medium none;
+	border-radius: 0;
+	box-shadow: none;
+	color: #000;
+	font-size: 14px;
+	height: 32px;
+	line-height: 30px;
+	margin-top: 0 !important;
+	padding: 0 16px !important;
+	font-weight: 500;
+}
+body.login p.submit input#wp-submit:hover{background-color: #fff;color:#000;}
+body.login div#login p#backtoblog, body.login div#login p#nav {
+	margin: 20px 0 0;
+	padding: 0;
+}
+body.login div#login p#nav {
+	float: right;
+}
+body.login div#login p#backtoblog, body.login div#login p#nav {
+	margin: 20px 0 0;
+	padding: 0;
+}
+body.login div#login p#backtoblog {
+	float: left;
+}
+body.login div#login h2{
+	text-align: center;
+	height: 70px;
+	margin-top: 30px;
+	font-size: 24px;
+	text-decoration: none;
+}
+body.login div#login h2 a{
+	text-decoration: none;
+	color: #fff;
+}
+.login #login_error, .login .message, .login .success{
+	border-left: 4px solid #4bbcbb;
+	background-color: #fff;
+}
+input[type=text]:focus, input[type=search]:focus, input[type=radio]:focus, input[type=tel]:focus, input[type=time]:focus, input[type=url]:focus, input[type=week]:focus, input[type=password]:focus, input[type=checkbox]:focus, input[type=color]:focus, input[type=date]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=email]:focus, input[type=month]:focus, input[type=number]:focus, select:focus, textarea:focus{
+	border-color: #fff;
+	box-shadow: #fff;
+}
+.wp-core-ui .button-primary.focus, .wp-core-ui .button-primary.hover, .wp-core-ui .button-primary:focus, .wp-core-ui .button-primary:hover{
+	background: #fff;
+	border-color: #fff;
+}
+.wp-core-ui .button-primary{
+	background: #fff;
+	border-color: #fff;
+}
+input[type=checkbox]:checked:before{
+	color: #fff;
+}
+.login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover, .login #backtoblog a, .login #nav a, .login h1 a{
+	color: #fff;
+}
+a:focus{
+	box-shadow: none;
+}
+body.login p.submit input#wp-submit{
+	background-color: #fff;
+}
+body.login p.submit input#wp-submit:hover{
+	background-color: #4bbcbb;
+	color: #fff;
+}
+.login .language-switcher{
+	display: none;
+}

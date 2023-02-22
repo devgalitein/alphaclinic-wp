@@ -692,3 +692,19 @@ function ajax_load_other_news() {
     $html .='</div>';
     echo json_encode(array('success' => true, 'html' => $html)); die;
 }
+
+/**
+ * backend login page css
+ */
+add_action( 'login_enqueue_scripts', 'load_admin_style' );
+function load_admin_style() {
+    wp_enqueue_style( 'admin_css', get_template_directory_uri(). '/assets/admin/admin-backend-style.css', false, '' );
+}
+
+/**
+ * admin side logo site url
+ */
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
