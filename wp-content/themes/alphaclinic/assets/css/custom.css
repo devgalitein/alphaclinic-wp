@@ -312,13 +312,13 @@ a {
 .wir-box-part:hover {
   background: #0a5181;
 }
-.wir-box-part a {
+.wir-box-part img {
   position: absolute;
   bottom: 16px;
   right: 13px;
   opacity: 0.5;
 }
-.wir-box-part a:hover {
+.wir-box-part:hover img {
   opacity: 1;
 }
 .wir-box-part h3 {
