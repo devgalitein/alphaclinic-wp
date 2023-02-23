@@ -178,11 +178,13 @@ get_header(); ?>
                             foreach ($joint_boxes as $joint_box) {
                             ?>
                                 <div class="col-md-6 col-lg-4">
-                                    <div class="wir-box-part">
-                                        <h3><?php echo $joint_box['joint_box_title']; ?></h3>
-                                        <p><?php echo $joint_box['joint_box_description']; ?></p>
-                                        <a href="<?php echo $joint_box['joint_box_url']['url']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" class="team-box-img-arrow" /></a>
-                                    </div>
+                                    <a href="<?php echo $joint_box['joint_box_url']['url']; ?>">
+                                        <div class="wir-box-part">
+                                            <h3><?php echo $joint_box['joint_box_title']; ?></h3>
+                                            <p><?php echo $joint_box['joint_box_description']; ?></p>
+                                            <img src="<?php echo get_template_directory_uri(); ?>/images/arrow.svg" class="team-box-img-arrow" />
+                                        </div>
+                                    </a>
                                 </div>
                             <?php } ?>
                         </div>
