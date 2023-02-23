@@ -153,7 +153,7 @@ get_header(); ?>
                             <div class="modal-body">
                                 <p>' . $joint_description_6 . '</p>
                             </div>
-                            <div class="modal-footer close-joint" data-hotspot="joint6"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                            <div class="modal-footer close-joint" data-hotspot="joint6"><button type="button" class="btn btn-default" data-dismiss="modal">Schliessen</button></div>
                         </div>
                     </div>';
                     ?>
