@@ -64,6 +64,21 @@ get_header(); ?>
                 </div>
                 <div class="container">
                 <?php get_template_part( 'template-parts/content', 'page' ); ?>
+                <?php
+                $map_title = CFS()->get( 'map_title');
+                $adress = CFS()->get( 'adress');
+                $address = str_replace(" ", "+", $adress);
+                $json = file_get_contents("https://maps.google.com/maps/api/geocode/json?address=$address&sensor=false&key=AIzaSyD8-rVs3O2zB33Yx83-DvHIn09JsGshQQM");
+                $json = json_decode($json);
+                $lat = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lat'};
+                $long = $json->{'results'}[0]->{'geometry'}->{'location'}->{'lng'};
+                ?>
+                    <input type="hidden" value="<?php echo $lat;?>" id="lat">
+                    <input type="hidden" value="<?php echo $long;?>" id="long">
+                    <h2 class="map-title"><?php echo $map_title; ?></h2>
+                    <div class="map-container">
+                        <div id="map"></div>
+                    </div>
                 </div>
              <?php endwhile; ?>
 
@@ -77,3 +92,25 @@ get_header(); ?>
 </div><!-- #content-full -->
 
 <?php get_footer(); ?>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8-rVs3O2zB33Yx83-DvHIn09JsGshQQM&callback=initMap&v=weekly" defer
+></script>
+<script>
+    let map;
+    var lat=document.getElementById("lat").value;
+    var long=document.getElementById("long").value;
+    function initMap() {
+        const myLatLng = { lat: parseFloat(lat), lng: parseFloat(long) };
+        const mapOptions = {
+            zoom: 16,
+            center: myLatLng,
+        };
+
+        map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        const marker = new google.maps.Marker({
+            position: myLatLng,
+            title: 'Alphaclinic Zurich',
+            map: map,
+        });
+    }
+    window.initMap = initMap;
+</script>

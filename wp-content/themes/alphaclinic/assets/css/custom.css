@@ -1302,3 +1302,17 @@ line-height: 20px;
     display:none
   }
 }
+#map {
+  height: 332px;
+}
+.p-tb-90.post-42 {
+  padding-bottom: 0;
+}
+.map-container{
+  padding-bottom: 90px;
+}
+@media only screen and (max-width: 992px) {
+  .map-container{
+    padding-bottom: 45px;
+  }
+}
