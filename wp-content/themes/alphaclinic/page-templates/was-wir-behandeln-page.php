@@ -98,7 +98,7 @@ get_header(); ?>
                             <div class="modal-body">
                                 <p>' . $joint_description_2 . '</p>
                             </div>
-                            <div class="modal-footer close-joint" data-hotspot="joint1"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                            <div class="modal-footer close-joint" data-hotspot="joint1"><button type="button" class="btn btn-default" data-dismiss="modal">Schliessen</button></div>
                         </div>
                     </div>
                     <div class="popup" id="joint2">
@@ -109,7 +109,7 @@ get_header(); ?>
                             <div class="modal-body">
                                 <p>' . $joint_description_1 . '</p>
                             </div>
-                            <div class="modal-footer close-joint" data-hotspot="joint2"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                            <div class="modal-footer close-joint" data-hotspot="joint2"><button type="button" class="btn btn-default" data-dismiss="modal">Schliessen</button></div>
                         </div>
                     </div>
                     <div class="popup" id="joint3">
@@ -120,7 +120,7 @@ get_header(); ?>
                             <div class="modal-body">
                                 <p>' . $joint_description_3 . '</p>
                             </div>
-                            <div class="modal-footer close-joint" data-hotspot="joint3"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                            <div class="modal-footer close-joint" data-hotspot="joint3"><button type="button" class="btn btn-default" data-dismiss="modal">Schliessen</button></div>
                         </div>
                     </div>
                      <div class="popup" id="joint4">
@@ -131,7 +131,7 @@ get_header(); ?>
                             <div class="modal-body">
                                 <p>' . $joint_description_4 . '</p>
                             </div>
-                            <div class="modal-footer close-joint" data-hotspot="joint4"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                            <div class="modal-footer close-joint" data-hotspot="joint4"><button type="button" class="btn btn-default" data-dismiss="modal">Schliessen</button></div>
                         </div>
                     </div>                   
                     <div class="popup" id="joint5">
@@ -142,7 +142,7 @@ get_header(); ?>
                             <div class="modal-body">
                                 <p>' . $joint_description_5 . '</p>
                             </div>
-                            <div class="modal-footer close-joint" data-hotspot="joint5"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+                            <div class="modal-footer close-joint" data-hotspot="joint5"><button type="button" class="btn btn-default" data-dismiss="modal">Schliessen</button></div>
                         </div>
                     </div>
                     <div class="popup" id="joint6">
