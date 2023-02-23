@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 get_header(); ?>
 
-	<div id="content" class="content-area">
+	<div id="content" class="content-area container p-tb-90">
 			<main id="main" class="site-main error-page" role="main">
 
 				<?php responsive_mobile_entry_before(); ?>

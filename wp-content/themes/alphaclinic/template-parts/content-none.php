@@ -53,20 +53,6 @@ if ( ! defined( 'WPINC' ) ) {
 			<p><?php _e( 'Don&#39;t panic, we&#39;ll get through this together. Let&#39;s explore our options here.', 'responsive-mobile' ); ?></p>
 			<p><?php _e( 'The URL may be misspelled or the page you are looking for is no longer available.', 'responsive-mobile' ); ?></p>
 
-			<p>
-				<?php printf(
-						__( 'You can return %s or search for the page you were looking for.', 'responsive-mobile' ),
-						sprintf(
-							'<a href="%1$s" title="%2$s">%3$s</a>',
-							esc_url( get_home_url() ),
-							esc_attr__( 'Home', 'responsive-mobile' ),
-							esc_attr__( '&larr; Home', 'responsive-mobile' )
-						)
-				); ?>
-			</p>
-
-			<?php get_search_form(); ?>
-
 		<?php endif; ?>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->
