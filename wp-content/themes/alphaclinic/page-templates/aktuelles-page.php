@@ -41,7 +41,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <main>
-                    <div class="aktuelles-main-section p-tb-90">
+                    <div class="aktuelles-main-section p-tb-90" id="aktuelles">
                         <div class="container">
                             <?php
                             $arguments = array(

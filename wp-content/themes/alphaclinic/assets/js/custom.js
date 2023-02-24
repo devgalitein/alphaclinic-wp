@@ -84,6 +84,9 @@ jQuery(document).ready(function ($) {
             },
             success: function(data) {
                 $(".aktuelles-detials-box").html(data.html);
+                $('html, body').animate({
+                    scrollTop: $("#aktuelles").offset().top
+                }, 100);
             }
         });
     }
