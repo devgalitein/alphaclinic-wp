@@ -620,12 +620,18 @@ function team_shortcode()
         }
         $rowCount++;
         $html .= '<div class="box-img' . $i . ' box-img">
-                                <img src="' . $team['thumb'] . '" alt="' . $team['alt'] . '">
-                                <a href="' . $team['team_link'] . '"><img src="'.get_template_directory_uri().'/images/arrow.svg" class="team-box-img-arrow"/></a>
-                            </div>
-                            <div class="box-content' . $i . ' box-content"> <h3>' . $team['team_title'] . '</h3>
-                                <p>' . $team['team_content'] . '</p>
-                            </div>';
+                      <a href="' . $team['team_link'] . '">
+                          <img src="' . $team['thumb'] . '" alt="' . $team['alt'] . '">
+                          <img src="'.get_template_directory_uri().'/images/arrow.svg" class="team-box-img-arrow"/>
+                      </a>
+                  </div>
+                  <div class="box-content' . $i . ' box-content">
+                    <a href="' . $team['team_link'] . '">
+                        <h3>' . $team['team_title'] . '</h3>
+                        <p>' . $team['team_content'] . '</p>
+                    </a>
+                  </div>
+                        ';
         if ($rowCount % $numOfCols == 0) {
             $html .= '</div>';
         }

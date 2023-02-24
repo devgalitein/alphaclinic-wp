@@ -687,8 +687,12 @@ a {
   background: #f0f0f0;
   color: #8c8c8c;
 }
+.grid-container .box-content a {
+  background: #f0f0f0;
+  color: #8c8c8c;
+}
 .grid-container .box-content:hover,
-.grid-container .team-hover {
+.grid-container .team-hover, .grid-container .box-content a:hover {
   background: #00558e;
   color: #ffffff;
 }
