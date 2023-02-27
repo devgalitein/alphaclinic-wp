@@ -1051,6 +1051,9 @@ h4.contact-second-title {
 .map-container {
   padding-bottom: 90px;
 }
+.team-box-img .main-hotspot-part:hover:after {
+  display:none;
+}
 
 @media only screen and (max-width: 1440px) {
   .main-hotspot-part .right-side-open .lg-hotspot__button-text {
@@ -1092,7 +1095,64 @@ h4.contact-second-title {
     left: -110px;
   }
 }
-@media only screen and (max-width: 992px) {
+
+@media only screen and (max-width: 1180px) {
+  .lg-hotspot__button:hover .lg-hotspot__button-text,
+  .lg-hotspot__button:hover h3:after,
+  .main-hotspot-part:nth-child(7):hover:after {
+    display: none;
+  }
+  .footer-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+  }
+  .footer-column-1 {
+    flex: inherit;
+  }
+  .footer-right-section {
+    display: flex;
+    justify-content: space-between;
+    flex: inherit;
+    width: 100%;
+  }
+  .team-detail-header-title {
+    position: absolute;
+    bottom: 36px;
+    font-size: 36px;
+    font-weight: 400;
+    color: #fff;
+    width: 90%;
+    text-align: center;
+    padding: 0 30px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .menu-dropdown {
+    display: none;
+  }
+  .desktop-main-menu {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-items: center;
+  }
+  .hamburger {
+    display: none;
+  }
+  .mobile-hide {
+    display: none;
+  }
+  .desktop-main-menu {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    align-items: center;
+  }
+  .map-container {
+    padding-bottom: 45px;
+  }
+}
+@media only screen and (max-width: 991px) {
   .menu-dropdown {
     width: 100%;
     top: 54px;
@@ -1189,65 +1249,10 @@ h4.contact-second-title {
     padding: 45px 0;
   }
 }
-@media only screen and (min-width: 992px) {
-  .menu-dropdown {
-    display: none;
-  }
-  .desktop-main-menu {
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    align-items: center;
-  }
-  .hamburger {
-    display: none;
-  }
-  .mobile-hide {
-    display: none;
-  }
-  .desktop-main-menu {
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    align-items: center;
-  }
-}
-@media only screen and (max-width: 1180px) {
-  .lg-hotspot__button:hover .lg-hotspot__button-text,
-  .lg-hotspot__button:hover h3:after,
-  .main-hotspot-part:nth-child(7):hover:after {
-    display: none;
-  }
-  .footer-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
-}
-.footer-column-1 {
-  flex: inherit;
-}
-.footer-right-section {
-  display: flex;
-  justify-content: space-between;
-  flex: inherit;
-  width: 100%;
-}
-.team-detail-header-title {
-  position: absolute;
-  bottom: 36px;
-  font-size: 36px;
-  font-weight: 400;
-  color: #fff;
-  width: 90%;
-  text-align: center;
-  padding: 0 30px;
-}
-}
 
-@media only screen and (max-width: 992px) {
-  .map-container {
-    padding-bottom: 45px;
-  }
-}
+
+
+
 @media only screen and (max-width: 767px) {
   .custom-logo {
     max-width: 120px;
@@ -1416,4 +1421,13 @@ h4.contact-second-title {
   }
 }
 
-
+@media only screen and (max-width: 400px) {
+  .custom-logo {
+    max-width: 100px;
+}
+  .last-menu-item {
+    padding: 10px;
+    margin-left: 0px;
+    font-size: 12px;
+}
+}
