@@ -580,6 +580,7 @@ function team_shortcode()
     $arguments = array(
         'post_type' => 'post',
         'posts_per_page' => $count,
+        'orderby'   => 'menu_order',
         'tax_query' => array(
             array(
                 'taxonomy' => 'category',
