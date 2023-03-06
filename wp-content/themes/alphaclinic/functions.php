@@ -581,6 +581,7 @@ function team_shortcode()
         'post_type' => 'post',
         'posts_per_page' => $count,
         'orderby'   => 'menu_order',
+        'order' => 'ASC',
         'tax_query' => array(
             array(
                 'taxonomy' => 'category',
