@@ -716,3 +716,32 @@ function my_login_logo_url() {
     return home_url();
 }
 add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+//Remove unneccessary css/js
+function remove_front_css_js(){
+    if (!is_admin()) {
+        if (is_front_page()) {
+            wp_dequeue_style('contact-form-7');
+            wp_dequeue_script('contact-form-7');
+        }
+    }
+}
+add_action('wp_enqueue_scripts', 'remove_front_css_js', 9999);
+
+// Remove All Yoast HTML Comments
+add_filter( 'wpseo_debug_markers', '__return_false' );
+
+/**
+ * Disable the emoji's
+ */
+function disable_emojis() {
+    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+    remove_action( 'wp_print_styles', 'print_emoji_styles' );
+    remove_action( 'admin_print_styles', 'print_emoji_styles' );
+    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+    remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+//    add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+}
+add_action( 'init', 'disable_emojis' );
