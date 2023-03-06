@@ -29,7 +29,7 @@ get_header();
                         */
                         echo '<div class="team-navigation">';
                            if( get_adjacent_post(true, '', true) ) {
-                               previous_post_link('%link', '<img class="team-previous-icon" src="'.get_template_directory_uri().'/images/Previous.svg">');
+                               previous_post_link('%link', '<img class="team-previous-icon" src="'.get_template_directory_uri().'/images/Previous.svg">', true);
                            } else {
                                $first = new WP_Query('posts_per_page=1&order=DESC&category_name=team'); $first->the_post();
                                echo '<a href="' . get_permalink() . '"><img class="team-previous-icon" src="'.get_template_directory_uri().'/images/Previous.svg"></a>';
@@ -37,7 +37,7 @@ get_header();
                            };
 
                            if( get_adjacent_post(true, '', false) ) {
-                               next_post_link('%link', '<img class="team-next-icon" src="'.get_template_directory_uri().'/images/Next.svg">');
+                               next_post_link('%link', '<img class="team-next-icon" src="'.get_template_directory_uri().'/images/Next.svg">', true);
                            } else {
                                $last = new WP_Query('posts_per_page=1&order=ASC&category_name=team'); $last->the_post();
                                echo '<a href="' . get_permalink() . '"><img class="team-next-icon" src="'.get_template_directory_uri().'/images/Next.svg"></a>';
