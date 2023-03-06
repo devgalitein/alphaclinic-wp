@@ -64,7 +64,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="main-hotspot-part"
-                         style="top: 47.2%; left: 47.2%" data-hotspot="joint4">
+                         style="top: 49.8%; left: 49.8%" data-hotspot="joint4">
                         <div class="lg-hotspot__button right-side-open">
                             <div class="lg-hotspot__button-text">
                                 <h3>' . $joint_title_4 . '</h3>

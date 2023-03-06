@@ -499,7 +499,7 @@ function home_treatment_shortcode()
         } elseif ($treatment_title == 'Wirbelsäule') {
             $style = "top: 35.2%; left: 50.8%";
         } elseif ($treatment_title == 'Hüfte') {
-            $style = "top: 44.2%; left: 44.2%";
+            $style = "top: 48.2%; left: 48.2%";
         } elseif ($treatment_title == 'Knie') {
             $style = "top: 59%; left: 27.5%";
         } elseif ($treatment_title == 'Fuss') {

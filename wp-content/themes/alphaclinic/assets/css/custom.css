@@ -598,11 +598,11 @@ a {
   transform: translateY(-50%);
 }
 .main-hotspot-part:nth-child(5) .right-side-open .lg-hotspot__button-text {
-  right: 320px;
+  right: 370px;
 }
 .main-hotspot-part:hover:nth-child(5):after {
-  width: 280px;
-  left: -280px;
+  width: 320px;
+  left: -306px;
 }
 .main-hotspot-part.right-content-part:nth-child(5):after {
   right: -260px;
@@ -1074,12 +1074,12 @@ h4.contact-second-title {
     top: inherit;
   }
   .main-hotspot-part:nth-child(5) .right-side-open .lg-hotspot__button-text {
-    right: 280px;
+    right: 335px;
     width: 320px;
   }
   .main-hotspot-part:nth-child(5):hover:after {
-    width: 260px;
-    left: -240px;
+    width: 296px;
+    left: -280px;
   }
   .main-hotspot-part:nth-child(4) .lg-hotspot__button-text {
     width: 320px;
