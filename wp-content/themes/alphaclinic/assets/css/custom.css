@@ -1428,8 +1428,8 @@ h4.contact-second-title {
     left: 20.5% !important;
   }
   .main-hotspot-part.knie-joint {
-    top: 61%;
-    left: 30.5%;
+    top: 61%!important;
+    left: 30.5%!important;
   }
   .main-hotspot-part.wirbelsaule-joint {
     top: 39%;
