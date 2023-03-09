@@ -489,6 +489,7 @@ function home_treatment_shortcode()
     while ($query->have_posts()) : $query->the_post();
         $thumb = get_template_directory_uri() . '/images/was-wir-behandeln-home.png';
         $treatment_title = get_the_title();
+        $slug = basename(get_permalink(get_the_ID()));
         $treatment_content = get_the_content();
         $trimmed_content = wp_trim_words($treatment_content, 50, '');
         $treatment_link = get_the_permalink();
@@ -508,7 +509,7 @@ function home_treatment_shortcode()
         $html .= '<div class="team-box-img">
                     <a href="' . $treatment_link . '">
                         <img src="' . $thumb . '" />
-                        <div class="main-hotspot-part"
+                        <div class="main-hotspot-part '.$slug.'-joint"
                            style="' . $style . '">
                             <div class="lg-hotspot__button">
                                 <div class="lg-hotspot__button-text">
