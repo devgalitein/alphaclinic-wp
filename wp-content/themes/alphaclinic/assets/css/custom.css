@@ -137,9 +137,6 @@ a {
   color: #a9a9a9;
   text-decoration: none;
 }
-.header-menu-part ul li a:hover {
-  color: #00578e;
-}
 .header-menu-part ul {
   display: flex;
   align-items: center;
@@ -585,7 +582,6 @@ a {
 }
 .last-menu-item:hover {
   color: #fff;
-  background: #4bbcbb;
 }
 .header-menu-part {
   display: inline-flex;
@@ -602,11 +598,11 @@ a {
   transform: translateY(-50%);
 }
 .main-hotspot-part:nth-child(5) .right-side-open .lg-hotspot__button-text {
-  right: 370px;
+  right: 320px;
 }
 .main-hotspot-part:hover:nth-child(5):after {
-  width: 320px;
-  left: -306px;
+  width: 280px;
+  left: -280px;
 }
 .main-hotspot-part.right-content-part:nth-child(5):after {
   right: -260px;
@@ -1078,12 +1074,12 @@ h4.contact-second-title {
     top: inherit;
   }
   .main-hotspot-part:nth-child(5) .right-side-open .lg-hotspot__button-text {
-    right: 335px;
+    right: 280px;
     width: 320px;
   }
   .main-hotspot-part:nth-child(5):hover:after {
-    width: 296px;
-    left: -280px;
+    width: 260px;
+    left: -240px;
   }
   .main-hotspot-part:nth-child(4) .lg-hotspot__button-text {
     width: 320px;
@@ -1175,9 +1171,6 @@ h4.contact-second-title {
     display: block;
     font-weight: 700;
     text-transform: uppercase;
-  }
-  .menu-dropdown__inner ul li a:hover {
-    color: #00578e;
   }
   .banner-secction-text-inner img,
   .page-banner-inner .banner-inner-logo {
@@ -1425,6 +1418,22 @@ h4.contact-second-title {
   .lg-hotspot__button {
     height: 18px;
     width: 18px;
+  }
+  .main-hotspot-part.ellbogen-joint {
+    top: 26% !important;
+    left: 61% !important;
+  }
+  .main-hotspot-part.fuss-joint {
+    top: 80% !important;
+    left: 20.5% !important;
+  }
+  .main-hotspot-part.knie-joint {
+    top: 61%;
+    left: 30.5%;
+  }
+  .main-hotspot-part.wirbelsaule-joint {
+    top: 39%;
+    left: 50.8%;
   }
 }
 
