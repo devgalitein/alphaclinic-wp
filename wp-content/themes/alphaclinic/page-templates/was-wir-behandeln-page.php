@@ -37,7 +37,7 @@ get_header(); ?>
                     <img src="<?php echo $header_img['url'][0]; ?>" width="100%" />
                     <?php
                     echo '<div class="main-hotspot-part right-content-part"
-                         style="top: 22%; left: 50%" data-hotspot="joint1">
+                         style="top: 21%; left: 49.20%" data-hotspot="joint1">
                         <div class="lg-hotspot__button">
                             <div class="lg-hotspot__button-text">
                                 <h3>' . $joint_title_2 . '</h3>
@@ -46,7 +46,7 @@ get_header(); ?>
                         </div>
                     </div>
                     <div class="main-hotspot-part right-content-part"
-                       style="top: 27%; left: 60%" data-hotspot="joint2">
+                       style="top: 25.3%; left: 57.5%" data-hotspot="joint2">
                         <div class="lg-hotspot__button">
                             <div class="lg-hotspot__button-text">
                                 <h3>' . $joint_title_1 . '</h3>
