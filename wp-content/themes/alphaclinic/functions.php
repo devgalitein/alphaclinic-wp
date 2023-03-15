@@ -746,3 +746,17 @@ function disable_emojis() {
 //    add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 }
 add_action( 'init', 'disable_emojis' );
+
+function remove_unused_css_js()
+{
+    if (!is_admin()) {
+        wp_dequeue_style('classic-theme-styles');
+        if (is_page('philosophie') || is_page('was-wir-behandeln') || is_page('team') || is_page('online-termin') || is_page('impressum') || is_page('aktuelles')) {
+            wp_dequeue_script('contact-form-7');
+            wp_dequeue_script('wpcf7-recaptcha');
+            wp_dequeue_script('google-recaptcha');
+            wp_dequeue_style('contact-form-7');
+        }
+    }
+}
+add_action('wp_enqueue_scripts', 'remove_unused_css_js', 9999);
