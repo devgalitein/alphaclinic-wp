@@ -487,7 +487,7 @@ function home_treatment_shortcode()
     $query = new WP_Query($arguments);
     $html = "";
     while ($query->have_posts()) : $query->the_post();
-        $thumb = get_template_directory_uri() . '/images/was-wir-behandeln-home.png';
+        $thumb = get_template_directory_uri() . '/images/was-wir-behandeln-home.webp';
         $treatment_title = get_the_title();
         $slug = basename(get_permalink(get_the_ID()));
         $treatment_content = get_the_content();
