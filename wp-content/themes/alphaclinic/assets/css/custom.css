@@ -137,6 +137,9 @@ a {
   color: #a9a9a9;
   text-decoration: none;
 }
+.header-menu-part ul li a:hover {
+  color: #00578e;
+}
 .header-menu-part ul {
   display: flex;
   align-items: center;
@@ -585,6 +588,7 @@ a {
 }
 .last-menu-item:hover {
   color: #fff;
+  background: #4bbcbb;
 }
 .header-menu-part {
   display: inline-flex;
@@ -1174,6 +1178,9 @@ h4.contact-second-title {
     display: block;
     font-weight: 700;
     text-transform: uppercase;
+  }
+  .menu-dropdown__inner ul li a:hover {
+    color: #00578e;
   }
   .banner-secction-text-inner img,
   .page-banner-inner .banner-inner-logo {
