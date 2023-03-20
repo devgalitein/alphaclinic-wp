@@ -455,13 +455,18 @@ function home_team_shortcode()
         $team_content = get_the_content();
         $trimmed_content = wp_trim_words($team_content, 50, '');
         $team_link = get_the_permalink();
+        if ($trimmed_content == "Arztsekretärin") {
+            $link = 'javascript:void(0)';
+        } else {
+            $link = $team_link;
+        }
         $html .= '<div class="team-box-img">
-                <a href="' . $team_link . '">
+                <a href="' . $link . '">
                   <img src="' . $thumb . '" alt="' . $alt . '" />
                   <img src="' . get_template_directory_uri() . '/images/arrow.svg" class="team-box-img-arrow"/>
                 </a>
               </div>
-              <a href="' . $team_link . '"><h3>' . $team_title . '</h3></a>
+              <a href="' . $link . '"><h3>' . $team_title . '</h3></a>
               <p>' . $trimmed_content . '</p>';
     endwhile;
     wp_reset_postdata();
@@ -622,14 +627,19 @@ function team_shortcode()
             $i = 1;
         }
         $rowCount++;
+        if ($team['team_content'] == "Arztsekretärin") {
+            $link = 'javascript:void(0)';
+        } else {
+            $link = $team['team_link'];
+        }
         $html .= '<div class="box-img' . $i . ' box-img">
-                      <a href="' . $team['team_link'] . '">
+                      <a href="' . $link . '">
                           <img src="' . $team['thumb'] . '" alt="' . $team['alt'] . '">
                           <img src="'.get_template_directory_uri().'/images/arrow.svg" class="team-box-img-arrow"/>
                       </a>
                   </div>
                   <div class="box-content' . $i . ' box-content">
-                    <a href="' . $team['team_link'] . '">
+                    <a href="' . $link . '">
                         <h3>' . $team['team_title'] . '</h3>
                         <p>' . $team['team_content'] . '</p>
                     </a>
