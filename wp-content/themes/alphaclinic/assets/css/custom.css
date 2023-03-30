@@ -97,6 +97,9 @@ a {
   color: #8c8c8c;
   margin-top: 24px;
 }
+.home-box-section .home-team-section h3 {
+  text-transform: inherit;
+}
 .home-box-section p {
   font-size: 15px;
   line-height: 20px;
@@ -714,7 +717,7 @@ a {
 .grid-container .box-content h3 {
   font-size: 36px;
   line-height: 49px;
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
 }
 .grid-container .box-content p {
   font-size: 15px;
