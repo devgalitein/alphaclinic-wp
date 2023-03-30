@@ -454,8 +454,9 @@ function home_team_shortcode()
         $team_title = get_the_title();
         $team_content = get_the_content();
         $trimmed_content = wp_trim_words($team_content, 50, '');
+        $description = CFS()->get( 'description' );
         $team_link = get_the_permalink();
-        if ($trimmed_content == "Arztsekretärin") {
+        if ($description == "Arztsekretärin") {
             $link = 'javascript:void(0)';
         } else {
             $link = $team_link;
@@ -467,7 +468,7 @@ function home_team_shortcode()
                 </a>
               </div>
               <a href="' . $link . '"><h3>' . $team_title . '</h3></a>
-              <p>' . $trimmed_content . '</p>';
+              <p>' . $description . '</p>';
     endwhile;
     wp_reset_postdata();
     return $html;
@@ -609,10 +610,11 @@ function team_shortcode()
         $team_title = get_the_title();
         $team_content = get_the_content();
         $trimmed_content = wp_trim_words($team_content, 12, '');
+        $description = CFS()->get( 'description' );
         $team_link = get_the_permalink();
         $teams[] = [
             'team_title' => $team_title,
-            'team_content' => $trimmed_content,
+            'team_content' => $description,
             'team_link' => $team_link,
             'thumb' => $thumb,
             'alt' => $alt,
