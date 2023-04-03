@@ -93,7 +93,6 @@ a {
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0.05em;
-  text-transform: capitalize;
   color: #8c8c8c;
   margin-top: 24px;
 }
@@ -195,7 +194,6 @@ a {
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 0.05em;
-  text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
 }

@@ -457,7 +457,7 @@ function home_team_shortcode()
         $description = CFS()->get( 'description' );
         $team_link = get_the_permalink();
         if ($description == "Arztsekretärin") {
-            $link = 'javascript:void(0)';
+            $link = home_url().'/team/';
         } else {
             $link = $team_link;
         }
