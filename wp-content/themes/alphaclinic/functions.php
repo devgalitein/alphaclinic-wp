@@ -772,3 +772,11 @@ function remove_unused_css_js()
     }
 }
 add_action('wp_enqueue_scripts', 'remove_unused_css_js', 9999);
+
+//add_action( 'pre_get_posts', 'wpsites_remove_posts_from_team_page' );
+//function wpsites_remove_posts_from_team_page( $query ) {
+//
+//    if( $query->is_main_query()) {
+//        $query->set( 'post__not_in', array( 283,106,108 ) );
+//    }
+//}

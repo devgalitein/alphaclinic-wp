@@ -28,18 +28,46 @@ get_header();
                         *  Infinite next and previous post looping in WordPress
                         */
                         echo '<div class="team-navigation">';
-                           if( get_adjacent_post(true, '', true) ) {
+                           if( get_adjacent_post(true, '9', true) ) {
                                previous_post_link('%link', '<img class="team-previous-icon" src="'.get_template_directory_uri().'/images/Previous.svg">', true);
                            } else {
-                               $first = new WP_Query('posts_per_page=1&order=DESC&category_name=team'); $first->the_post();
+                               $arguments = array(
+                                   'post_type' => 'post',
+                                   'posts_per_page' => 1,
+                                   'order' => 'DESC',
+                                   'category_name' => 'team',
+                                   'tax_query'      => array(
+                                       array(
+                                           'taxonomy' => 'category',
+                                           'terms' => array(9),
+                                           'field' => 'term_id',
+                                           'operator' => 'NOT IN'
+                                       )
+                                   )
+                               );
+                               $first = new WP_Query($arguments); $first->the_post();
                                echo '<a href="' . get_permalink() . '"><img class="team-previous-icon" src="'.get_template_directory_uri().'/images/Previous.svg"></a>';
                                wp_reset_query();
                            };
 
-                           if( get_adjacent_post(true, '', false) ) {
+                           if( get_adjacent_post(true, '9', false) ) {
                                next_post_link('%link', '<img class="team-next-icon" src="'.get_template_directory_uri().'/images/Next.svg">', true);
                            } else {
-                               $last = new WP_Query('posts_per_page=1&order=ASC&category_name=team'); $last->the_post();
+                               $arguments = array(
+                                   'post_type' => 'post',
+                                   'posts_per_page' => 1,
+                                   'order' => 'ASC',
+                                   'category_name' => 'team',
+                                   'tax_query'      => array(
+                                       array(
+                                           'taxonomy' => 'category',
+                                           'terms' => array(9),
+                                           'field' => 'term_id',
+                                           'operator' => 'NOT IN'
+                                       )
+                                   )
+                               );
+                               $last = new WP_Query($arguments); $last->the_post();
                                echo '<a href="' . get_permalink() . '"><img class="team-next-icon" src="'.get_template_directory_uri().'/images/Next.svg"></a>';
                                wp_reset_query();
                            }
