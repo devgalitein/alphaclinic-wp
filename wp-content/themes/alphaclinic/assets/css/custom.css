@@ -480,7 +480,7 @@ a {
   color: #ffffff !important;
   font-size: 36px !important;
   line-height: 49px !important;
-  text-transform: capitalize !important;
+  /*text-transform: capitalize !important;*/
   left: 50%;
   transform: translateX(-50%);
 }
